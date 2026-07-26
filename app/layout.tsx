@@ -60,6 +60,11 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
   },
+  icons: {
+    icon: "/gdg-logo.png",
+    shortcut: "/gdg-logo.png",
+    apple: "/gdg-logo.png",
+  },
 };
 
 export const viewport: Viewport = {
