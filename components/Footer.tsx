@@ -139,6 +139,9 @@ export default function Footer() {
                 <Link href="#" className="block text-gray-900 hover:text-google-blue transition-colors">
                   Community Guidelines
                 </Link>
+                <Link href="/brand-guidelines" className="block text-gray-900 hover:text-google-blue transition-colors">
+                  Brand Guidelines
+                </Link>
               </div>
             </div>
 

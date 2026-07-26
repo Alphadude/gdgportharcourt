@@ -14,6 +14,7 @@ const NAV_LINKS = [
   { label: "DP GENERATOR", href: "/dp-generator" },
   { label: "FAQS", href: "/faqs" },
   { label: "TEAM", href: "/team" },
+  { label: "BRAND", href: "/brand-guidelines" },
 ];
 
 export default function Navbar() {
