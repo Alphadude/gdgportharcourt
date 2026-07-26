@@ -119,28 +119,44 @@ export default function HomePage() {
       {/* ── Tracks Hero Banner (Whatever you're into...) ─────────────── */}
       <TracksHeroBanner />
 
-      {/* ── Ready To Join CTA Section ────────────────────────────────── */}
+      {/* ── Sponsorship & Partnership CTA Section ───────────────────── */}
       <section className="py-20 sm:py-28 px-4 sm:px-6 lg:px-8 border-t border-black/10">
         <div className="max-w-4xl mx-auto text-center space-y-6">
-          <h2 className="font-akira font-black text-3xl sm:text-6xl text-black tracking-tight uppercase leading-[0.95]">
-            READY TO JOIN
+          <div className="inline-block px-4 py-1.5 rounded-full bg-google-blue/10 border border-google-blue/20 text-google-blue font-akira font-bold text-xs uppercase tracking-widest">
+            SPONSORSHIP & PARTNERSHIPS
+          </div>
+
+          <h2 className="font-akira font-black text-3xl sm:text-5xl lg:text-6xl text-black tracking-tight uppercase leading-[0.98]">
+            GET SEEN. GET CONNECTED.
             <br />
-            <span className="text-google-blue">10,000+</span> DEVELOPERS?
+            <span className="text-google-blue">GIVE BACK.</span>
           </h2>
-          <p className="text-gray-700 font-medium text-base sm:text-lg max-w-xl mx-auto">
-            Tickets are selling fast. Secure your spot at Africa&apos;s largest tech festival.
+
+          <p className="text-gray-800 font-medium text-base sm:text-xl max-w-2xl mx-auto leading-relaxed">
+            Whether you&apos;re a startup, a tech company, or a community-first brand, sponsoring or exhibiting at <strong className="text-black font-bold">GDG Port Harcourt</strong> puts you in front of thousands of developers, creators, and tech leaders.
           </p>
-          <div className="pt-4">
+
+          <div className="flex flex-wrap justify-center items-center gap-4 pt-4">
+            <a
+              href="https://docs.google.com/presentation/d/13uvnh9dXp1mFqMYBSD5WD7YOd-g7aCHlcYfEjnV03OM/edit?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center px-9 py-4 rounded-full bg-[#F5B82A] text-black font-akira font-black text-xs sm:text-sm uppercase tracking-wider hover:bg-yellow-400 transition-all hover:scale-105 shadow-lg border-2 border-black"
+              id="sponsor-cta-button"
+            >
+              BECOME A SPONSOR →
+            </a>
             <a
               href="https://tickets.devfestlagos.com/buy"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center px-10 py-4 rounded-full bg-[#F5B82A] text-black font-akira font-black text-sm uppercase tracking-wider hover:bg-yellow-400 transition-all hover:scale-105 shadow-lg border-2 border-black"
+              className="inline-flex items-center px-9 py-4 rounded-full bg-white text-black font-akira font-black text-xs sm:text-sm uppercase tracking-wider hover:bg-gray-100 transition-all hover:scale-105 shadow-md border-2 border-black"
               id="footer-cta-buy-tickets"
             >
-              GET YOUR TICKET NOW →
+              GET YOUR TICKET NOW
             </a>
           </div>
+
           <p className="text-gray-500 font-bold text-xs sm:text-sm uppercase tracking-wider pt-2">
             November 28th, 2026 · Venue TBD, Port Harcourt
           </p>

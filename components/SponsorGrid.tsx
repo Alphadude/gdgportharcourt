@@ -65,10 +65,12 @@ export default function SponsorGrid({ sponsors }: SponsorGridProps) {
           sponsors and community partners.
         </p>
         <a
-          href="mailto:sponsors@devfestportharcourt.com"
-          className="inline-block mt-6 text-google-blue hover:underline text-sm"
+          href="https://docs.google.com/presentation/d/13uvnh9dXp1mFqMYBSD5WD7YOd-g7aCHlcYfEjnV03OM/edit?usp=sharing"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-block mt-6 text-google-blue hover:underline text-sm font-semibold"
         >
-          Interested in sponsoring? →
+          Interested in sponsoring? View Sponsor Deck →
         </a>
       </div>
 
