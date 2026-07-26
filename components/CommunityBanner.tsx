@@ -5,6 +5,8 @@
 // ─────────────────────────────────────────────────────────────────────────────
 "use client";
 
+import Image from "next/image";
+
 export default function CommunityBanner() {
   return (
     <section className="bg-[#FAF7EE] pt-6 text-white overflow-hidden w-full">
@@ -53,13 +55,14 @@ export default function CommunityBanner() {
               <div className="absolute inset-20 rounded-full border-2 border-[#F5B82A]/50" />
 
               {/* Center Emblem */}
-              <div className="w-20 h-20 sm:w-28 sm:h-28 rounded-full bg-[#18181B] border-2 border-[#F5B82A] flex items-center justify-center shadow-2xl z-10">
-                <span className="flex items-center gap-1">
-                  <span className="w-3.5 h-3.5 sm:w-4 sm:h-4 rounded-full bg-google-blue inline-block" />
-                  <span className="w-3.5 h-3.5 sm:w-4 sm:h-4 rounded-full bg-google-red inline-block" />
-                  <span className="w-3.5 h-3.5 sm:w-4 sm:h-4 rounded-full bg-google-yellow inline-block" />
-                  <span className="w-3.5 h-3.5 sm:w-4 sm:h-4 rounded-full bg-google-green inline-block" />
-                </span>
+              <div className="w-20 h-20 sm:w-28 sm:h-28 rounded-full bg-[#18181B] border-2 border-[#F5B82A] flex items-center justify-center shadow-2xl z-10 p-4 sm:p-6">
+                <Image
+                  src="/gdg-logo.png"
+                  alt="GDG Logo Emblem"
+                  width={80}
+                  height={80}
+                  className="w-full h-full object-contain"
+                />
               </div>
 
               {/* Orbit Node 1 (Top) */}

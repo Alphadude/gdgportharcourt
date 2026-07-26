@@ -21,6 +21,8 @@ const config: Config = {
       fontFamily: {
         akira: ["var(--font-akira)", "system-ui", "sans-serif"],
         inter: ["var(--font-inter)", "system-ui", "sans-serif"],
+        google: ["'Google Sans'", "system-ui", "sans-serif"],
+        "google-mono": ["'Google Sans Mono'", "monospace"],
       },
 
       // ── Custom animations ───────────────────────────────────────────────────

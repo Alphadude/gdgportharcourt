@@ -5,6 +5,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
 
@@ -36,13 +37,14 @@ export default function Navbar() {
             href="/"
             className="flex items-center gap-2 bg-white text-black px-4 py-1.5 rounded-full font-sans font-extrabold text-sm shadow-sm hover:scale-105 transition-transform"
           >
-            {/* Google 4-color brackets emblem */}
-            <span className="flex items-center gap-0.5">
-              <span className="w-2.5 h-2.5 rounded-full bg-google-blue inline-block" />
-              <span className="w-2.5 h-2.5 rounded-full bg-google-red inline-block" />
-              <span className="w-2.5 h-2.5 rounded-full bg-google-yellow inline-block" />
-              <span className="w-2.5 h-2.5 rounded-full bg-google-green inline-block" />
-            </span>
+            {/* GDG Logo emblem */}
+            <Image
+              src="/gdg-logo.png"
+              alt="GDG Logo"
+              width={24}
+              height={24}
+              className="w-6 h-6 object-contain"
+            />
             <span className="font-black tracking-tight text-black text-sm">
               DevFest Port Harcourt
             </span>

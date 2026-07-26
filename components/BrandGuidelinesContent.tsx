@@ -360,11 +360,11 @@ export default function BrandGuidelinesContent() {
                 </span>
               </div>
 
-              <div className="p-5 bg-white rounded-xl border border-gray-200 space-y-3 shadow-inner">
-                <p className="text-xl sm:text-2xl font-normal text-gray-900 tracking-tight">
+              <div className="p-5 bg-white rounded-xl border border-gray-200 space-y-3 shadow-inner font-google">
+                <p className="text-xl sm:text-2xl font-normal text-gray-900 tracking-tight font-google">
                   {customSampleText || "Google Sans Normal"}
                 </p>
-                <p className="text-xl sm:text-2xl font-bold text-gray-900 tracking-tight">
+                <p className="text-xl sm:text-2xl font-bold text-gray-900 tracking-tight font-google">
                   {customSampleText || "Google Sans Bold"}
                 </p>
               </div>
@@ -389,11 +389,11 @@ export default function BrandGuidelinesContent() {
                 </span>
               </div>
 
-              <div className="p-5 bg-white rounded-xl border border-gray-200 space-y-3 font-mono shadow-inner">
-                <p className="text-base sm:text-lg font-normal text-gray-900">
+              <div className="p-5 bg-white rounded-xl border border-gray-200 space-y-3 font-google-mono shadow-inner">
+                <p className="text-base sm:text-lg font-normal text-gray-900 font-google-mono">
                   {customSampleText || "Google Sans Mono Normal"}
                 </p>
-                <p className="text-base sm:text-lg font-bold text-gray-900">
+                <p className="text-base sm:text-lg font-bold text-gray-900 font-google-mono">
                   {customSampleText || "Google Sans Mono Bold"}
                 </p>
               </div>
