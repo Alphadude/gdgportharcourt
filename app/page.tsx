@@ -12,6 +12,7 @@ import SpeakersCarousel from "@/components/SpeakersCarousel";
 import MemoryLaneSection from "@/components/MemoryLaneSection";
 import FaqSection from "@/components/FaqSection";
 import CommunityBanner from "@/components/CommunityBanner";
+import TracksHeroBanner from "@/components/TracksHeroBanner";
 import Link from "next/link";
 import { speakers } from "@/lib/data/speakers";
 import { sponsors } from "@/lib/data/sponsors";
@@ -114,6 +115,9 @@ export default function HomePage() {
           ))}
         </div>
       </section>
+
+      {/* ── Tracks Hero Banner (Whatever you're into...) ─────────────── */}
+      <TracksHeroBanner />
 
       {/* ── Ready To Join CTA Section ────────────────────────────────── */}
       <section className="py-20 sm:py-28 px-4 sm:px-6 lg:px-8 border-t border-black/10">
