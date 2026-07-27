@@ -1,12 +1,11 @@
 // ─────────────────────────────────────────────────────────────────────────────
 // lib/data/faqs.ts
-// FAQ items for DevFest Port Harcourt 2026 categorized by General / Tickets
+// FAQ items for DevFest Port Harcourt 2026
 // ─────────────────────────────────────────────────────────────────────────────
 
 import { FaqItem } from "@/lib/types";
 
 export const faqs: FaqItem[] = [
-  // ── General Category ────────────────────────────────────────────────────────
   {
     id: "what-is-devfest",
     question: "What is DevFest?",
@@ -49,41 +48,40 @@ export const faqs: FaqItem[] = [
       "Yes! Registered participants receive light refreshments, lunch, and beverages during the conference hours.",
     category: "general",
   },
-
-  // ── Tickets Category ────────────────────────────────────────────────────────
   {
     id: "register",
     question: "How can I register for DevFest Port Harcourt 2026?",
     answer:
       "You can register directly on our official ticketing portal by clicking any of the BUY TICKETS buttons on this site.",
-    category: "tickets",
+    category: "general",
   },
   {
     id: "ticket-types",
     question: "What ticket types are available?",
     answer:
       "We offer multiple ticket tiers: Limited Free Community Passes, Standard Passes, and VIP Passes (includes priority workshop access, exclusive swag, and speaker networking area).",
-    category: "tickets",
+    category: "general",
   },
   {
     id: "refund",
     question: "What is the refund policy?",
     answer:
       "Tickets are non-refundable, but they are fully transferable to another attendee up to 48 hours prior to the event date.",
-    category: "tickets",
+    category: "general",
   },
   {
     id: "sponsor",
     question: "How can my company sponsor DevFest Port Harcourt 2026?",
     answer:
       "We offer custom sponsorship packages including Platinum, Gold, Silver, Bronze, and Community partner tiers. Reach out to our sponsorship team at sponsors@devfestportharcourt.com.",
-    category: "tickets",
+    category: "general",
   },
   {
     id: "speak",
     question: "How can I apply to speak at DevFest Port Harcourt 2026?",
     answer:
       "Our Call for Proposals (CFP) opens soon. Keep an eye on our social media handles @GDGPortHarcourt for the CFP submission link.",
-    category: "tickets",
+    category: "general",
   },
 ];
+

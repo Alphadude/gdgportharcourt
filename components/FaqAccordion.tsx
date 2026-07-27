@@ -12,13 +12,20 @@ interface FaqAccordionProps {
 }
 
 export default function FaqAccordion({ items }: FaqAccordionProps) {
-  const [activeCategory, setActiveCategory] = useState<"general" | "tickets">("general");
+  const categories = Array.from(
+    new Set(items.map((item) => item.category).filter((c): c is string => Boolean(c)))
+  );
+
+  const [activeCategory, setActiveCategory] = useState<string>(
+    categories[0] ?? "general"
+  );
   const [openId, setOpenId] = useState<string | null>(null);
 
-  // Filter items by active category
-  const filteredItems = items.filter(
-    (item) => (item.category ?? "general") === activeCategory
-  );
+  // Filter items by active category if multiple categories exist
+  const filteredItems =
+    categories.length > 1
+      ? items.filter((item) => (item.category ?? "general") === activeCategory)
+      : items;
 
   const toggle = (id: string) => {
     setOpenId((prev) => (prev === id ? null : id));
@@ -27,35 +34,26 @@ export default function FaqAccordion({ items }: FaqAccordionProps) {
   return (
     <div className="w-full">
       {/* ── Category Filter Pills ───────────────────────────────────────── */}
-      <div className="flex justify-center items-center gap-3 sm:gap-4 my-8 sm:my-10">
-        <button
-          onClick={() => {
-            setActiveCategory("general");
-            setOpenId(null);
-          }}
-          className={`px-8 sm:px-10 py-3 sm:py-3.5 rounded-full font-akira font-extrabold text-xs sm:text-sm uppercase tracking-wider transition-all duration-200 border-2 border-black cursor-pointer ${
-            activeCategory === "general"
-              ? "bg-[#F5B82A] text-black shadow-md scale-105"
-              : "bg-white text-black hover:bg-gray-100"
-          }`}
-        >
-          GENERAL
-        </button>
-
-        <button
-          onClick={() => {
-            setActiveCategory("tickets");
-            setOpenId(null);
-          }}
-          className={`px-8 sm:px-10 py-3 sm:py-3.5 rounded-full font-akira font-extrabold text-xs sm:text-sm uppercase tracking-wider transition-all duration-200 border-2 border-black cursor-pointer ${
-            activeCategory === "tickets"
-              ? "bg-[#F5B82A] text-black shadow-md scale-105"
-              : "bg-white text-black hover:bg-gray-100"
-          }`}
-        >
-          TICKETS
-        </button>
-      </div>
+      {categories.length > 1 && (
+        <div className="flex justify-center items-center gap-3 sm:gap-4 my-8 sm:my-10">
+          {categories.map((cat) => (
+            <button
+              key={cat}
+              onClick={() => {
+                setActiveCategory(cat);
+                setOpenId(null);
+              }}
+              className={`px-8 sm:px-10 py-3 sm:py-3.5 rounded-full font-akira font-extrabold text-xs sm:text-sm uppercase tracking-wider transition-all duration-200 border-2 border-black cursor-pointer ${
+                activeCategory === cat
+                  ? "bg-[#F5B82A] text-black shadow-md scale-105"
+                  : "bg-white text-black hover:bg-gray-100"
+              }`}
+            >
+              {cat}
+            </button>
+          ))}
+        </div>
+      )}
 
       {/* ── Speech-Bubble FAQ Accordion List ─────────────────────────────── */}
       <div className="max-w-3xl mx-auto space-y-4 sm:space-y-5">
