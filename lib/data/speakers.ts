@@ -1,12 +1,9 @@
 // ─────────────────────────────────────────────────────────────────────────────
 // lib/data/speakers.ts
-// Seed data — speaker list pulled from the live DevFest Lagos 2025 CDN
-// Images reference the real Google Cloud Storage bucket used by the live site.
+// Speaker list for DevFest Port Harcourt 2026
 // ─────────────────────────────────────────────────────────────────────────────
 
 import { Speaker } from "@/lib/types";
-
-const CDN = "https://storage.googleapis.com/devfestlagos2025/Ruby/Approved%20Speaker%20photos%20";
 
 export const speakers: Speaker[] = [
   {
@@ -14,7 +11,7 @@ export const speakers: Speaker[] = [
     name: "Olumide Balogun",
     title: "Engineering Lead",
     company: "Google",
-    imageUrl: `${CDN}/Olumide%20Balogun.png`,
+    imageUrl: "/speakers/black-speaker.png",
     tags: ["AI / ML", "Cloud"],
   },
   {
@@ -22,7 +19,7 @@ export const speakers: Speaker[] = [
     name: "Odun Eweniyi",
     title: "Co-Founder & COO",
     company: "PiggyVest",
-    imageUrl: `${CDN}/Odun%20Eweniyi.png`,
+    imageUrl: "/speakers/black-speaker.png",
     tags: ["Startup"],
   },
   {
@@ -30,7 +27,7 @@ export const speakers: Speaker[] = [
     name: "Thomas Steiner",
     title: "Developer Advocate",
     company: "Google",
-    imageUrl: `${CDN}/Thomas%20Steiner.png`,
+    imageUrl: "/speakers/black-speaker.png",
     tags: ["Web"],
   },
   {
@@ -38,7 +35,7 @@ export const speakers: Speaker[] = [
     name: "Oluwadunni Fanibe",
     title: "Software Engineer",
     company: "Microsoft",
-    imageUrl: `${CDN}/Oluwadunni%20Fanibe.png`,
+    imageUrl: "/speakers/black-speaker.png",
     tags: ["Cloud"],
   },
   {
@@ -46,7 +43,7 @@ export const speakers: Speaker[] = [
     name: "Sodiq Akinjobi",
     title: "Senior Frontend Engineer",
     company: "Meta",
-    imageUrl: `${CDN}/Sodiq%20Akinjobi.png`,
+    imageUrl: "/speakers/black-speaker.png",
     tags: ["Web"],
   },
   {
@@ -54,7 +51,7 @@ export const speakers: Speaker[] = [
     name: "Oleg Aravin",
     title: "Research Scientist",
     company: "Google DeepMind",
-    imageUrl: `${CDN}/Oleg%20Aravin.png`,
+    imageUrl: "/speakers/black-speaker.png",
     tags: ["AI / ML"],
   },
   {
@@ -62,7 +59,7 @@ export const speakers: Speaker[] = [
     name: "John Kimani",
     title: "Developer Relations Engineer",
     company: "Google",
-    imageUrl: `${CDN}/John%20Kimani.png`,
+    imageUrl: "/speakers/black-speaker.png",
     tags: ["Mobile", "Cloud"],
   },
   {
@@ -70,7 +67,7 @@ export const speakers: Speaker[] = [
     name: "Funke Olasupo",
     title: "Product Manager",
     company: "Paystack",
-    imageUrl: `${CDN}/Funke%20Olasupo.png`,
+    imageUrl: "/speakers/black-speaker.png",
     tags: ["Startup"],
   },
   {
@@ -78,7 +75,7 @@ export const speakers: Speaker[] = [
     name: "Folarin Aiyegbusi",
     title: "Android Engineer",
     company: "Kuda Bank",
-    imageUrl: `${CDN}/Folarin%20Aiyegbusi.png`,
+    imageUrl: "/speakers/black-speaker.png",
     tags: ["Mobile"],
   },
   {
@@ -86,7 +83,7 @@ export const speakers: Speaker[] = [
     name: "Femi Taiwo",
     title: "CTO",
     company: "Mono",
-    imageUrl: `${CDN}/Femi%20Taiwo.png`,
+    imageUrl: "/speakers/black-speaker.png",
     tags: ["Startup", "Cloud"],
   },
   {
@@ -94,7 +91,7 @@ export const speakers: Speaker[] = [
     name: "Chuka Ofili",
     title: "Lead Engineer",
     company: "Flutterwave",
-    imageUrl: `${CDN}/Chuka%20Ofili.png`,
+    imageUrl: "/speakers/black-speaker.png",
     tags: ["Web", "Cloud"],
   },
   {
@@ -102,7 +99,7 @@ export const speakers: Speaker[] = [
     name: "Amarachi Iheanacho",
     title: "ML Engineer",
     company: "Zindi",
-    imageUrl: `${CDN}/Amarachi%20Iheanacho.png`,
+    imageUrl: "/speakers/black-speaker.png",
     tags: ["AI / ML"],
   },
   {
@@ -110,7 +107,7 @@ export const speakers: Speaker[] = [
     name: "Samson Goddy",
     title: "Director of Community",
     company: "Open Source Community Africa",
-    imageUrl: `${CDN}/Samson%20Goddy.png`,
+    imageUrl: "/speakers/black-speaker.png",
     tags: ["Open Source"],
   },
   {
@@ -118,7 +115,7 @@ export const speakers: Speaker[] = [
     name: "Kofo Okesola",
     title: "Software Engineer",
     company: "Google",
-    imageUrl: `${CDN}/Kofo%20Okesola.png`,
+    imageUrl: "/speakers/black-speaker.png",
     tags: ["Web"],
   },
   {
@@ -126,7 +123,7 @@ export const speakers: Speaker[] = [
     name: "Bernard Parah",
     title: "CEO & Co-Founder",
     company: "Bitnob",
-    imageUrl: `${CDN}/Bernard%20Parah.png`,
+    imageUrl: "/speakers/black-speaker.png",
     tags: ["Startup"],
   },
   {
@@ -134,7 +131,7 @@ export const speakers: Speaker[] = [
     name: "Winifred Ekwunife",
     title: "Cloud Architect",
     company: "AWS",
-    imageUrl: `${CDN}/Winifred%20Ekwunife.png`,
+    imageUrl: "/speakers/black-speaker.png",
     tags: ["Cloud", "DevOps"],
   },
   {
@@ -142,7 +139,7 @@ export const speakers: Speaker[] = [
     name: "Mustapha Adekunle",
     title: "Security Researcher",
     company: "Cymulate",
-    imageUrl: `${CDN}/Mustapha%20Adekunle.png`,
+    imageUrl: "/speakers/black-speaker.png",
     tags: ["Security"],
   },
   {
@@ -150,7 +147,7 @@ export const speakers: Speaker[] = [
     name: "Goodness Ukeje",
     title: "Software Engineer",
     company: "CELO",
-    imageUrl: `${CDN}/Goodness%20Ukeje.png`,
+    imageUrl: "/speakers/black-speaker.png",
     tags: ["Web", "Open Source"],
   },
   {
@@ -158,7 +155,7 @@ export const speakers: Speaker[] = [
     name: "Shodipo Ayomide",
     title: "Developer Relations Lead",
     company: "Stack Overflow",
-    imageUrl: `${CDN}/Shodipo%20Ayomide.png`,
+    imageUrl: "/speakers/black-speaker.png",
     tags: ["Web", "Open Source"],
   },
   {
@@ -166,7 +163,8 @@ export const speakers: Speaker[] = [
     name: "Daniel Umoren",
     title: "Developer Advocate",
     company: "Vonage",
-    imageUrl: `${CDN}/Daniel%20Umoren.png`,
+    imageUrl: "/speakers/black-speaker.png",
     tags: ["Web"],
   },
 ];
+
