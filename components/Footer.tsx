@@ -67,12 +67,12 @@ export default function Footer() {
                 DEVFEST
               </h2>
               <a
-                href="https://tickets.devfestlagos.com/buy"
+                href="https://gdg.community.dev/events/details/google-gdg-port-harcourt-presents-devfest-port-harcourt-2026/cohost-gdg-port-harcourt/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center px-6 py-3 rounded-full bg-[#F5B82A] text-black font-akira text-xs sm:text-sm font-bold border-2 border-black hover:bg-yellow-400 transition-all hover:scale-105 shadow-sm uppercase tracking-wider"
               >
-                BUY TICKETS
+                REGISTER
               </a>
             </div>
 
@@ -151,7 +151,7 @@ export default function Footer() {
                 Login
               </Link>
               <a
-                href="https://gdg.community.dev/gdg-lagos"
+                href="https://gdg.community.dev/gdg-port-harcourt/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block text-gray-900 hover:text-google-blue transition-colors"
@@ -184,12 +184,11 @@ export default function Footer() {
           <div className="lg:col-span-6">
             <div className="relative rounded-[2.5rem] rounded-tl-[4rem] overflow-hidden border-2 border-black/10 shadow-2xl bg-gray-900 aspect-[16/9] sm:aspect-[16/8] lg:aspect-[16/9]">
               <Image
-                src="https://storage.googleapis.com/devfestlagos2025/Ruby/OG%20IMAGE.webp"
+                src="/devfest2024.jpg"
                 alt="DevFest Port Harcourt Organizing Team & Community"
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover object-center hover:scale-105 transition-transform duration-700"
-                unoptimized
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none" />
             </div>

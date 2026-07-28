@@ -22,12 +22,12 @@ export default function HeroSection() {
                 DEVFEST
               </h1>
               <a
-                href="https://tickets.devfestlagos.com/buy"
+                href="https://gdg.community.dev/events/details/google-gdg-port-harcourt-presents-devfest-port-harcourt-2026/cohost-gdg-port-harcourt/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center px-6 py-3 rounded-full bg-[#F5B82A] text-black font-akira text-xs sm:text-sm font-bold border-2 border-black hover:bg-yellow-400 transition-all hover:scale-105 shadow-sm uppercase tracking-wider"
               >
-                BUY TICKETS
+                REGISTER
               </a>
             </div>
 

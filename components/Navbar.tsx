@@ -74,12 +74,12 @@ export default function Navbar() {
           {/* Right Yellow CTA Pill */}
           <div className="hidden md:flex items-center">
             <a
-              href="https://tickets.devfestlagos.com/buy"
+              href="https://gdg.community.dev/events/details/google-gdg-port-harcourt-presents-devfest-port-harcourt-2026/cohost-gdg-port-harcourt/"
               target="_blank"
               rel="noopener noreferrer"
               className="px-6 py-2 rounded-full bg-[#F5B82A] text-black font-akira font-black text-xs border-2 border-black hover:bg-yellow-400 transition-all hover:scale-105 shadow-sm uppercase tracking-wider"
             >
-              BUY TICKETS
+              REGISTER
             </a>
           </div>
 
@@ -149,12 +149,12 @@ export default function Navbar() {
 
         <div className="p-6 border-t border-white/10">
           <a
-            href="https://tickets.devfestlagos.com/buy"
+            href="https://gdg.community.dev/events/details/google-gdg-port-harcourt-presents-devfest-port-harcourt-2026/cohost-gdg-port-harcourt/"
             target="_blank"
             rel="noopener noreferrer"
             className="w-full text-center block px-6 py-3 rounded-full bg-[#F5B82A] text-black font-akira font-bold text-xs border-2 border-black hover:bg-yellow-400 transition-all uppercase tracking-wider"
           >
-            BUY TICKETS
+            REGISTER
           </a>
         </div>
       </aside>

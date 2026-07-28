@@ -52,7 +52,7 @@ export const faqs: FaqItem[] = [
     id: "register",
     question: "How can I register for DevFest Port Harcourt 2026?",
     answer:
-      "You can register directly on our official ticketing portal by clicking any of the BUY TICKETS buttons on this site.",
+      "You can register directly on our official event page by clicking any of the REGISTER buttons on this site.",
     category: "general",
   },
   {

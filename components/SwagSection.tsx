@@ -87,7 +87,7 @@ export default function SwagSection() {
 
             {/* CTA Button */}
             <a
-              href="https://tickets.devfestlagos.com/buy"
+              href="https://gdg.community.dev/events/details/google-gdg-port-harcourt-presents-devfest-port-harcourt-2026/cohost-gdg-port-harcourt/"
               target="_blank"
               rel="noopener noreferrer"
               className="w-full py-4 rounded-full bg-[#F5B82A] text-black font-akira font-black text-xs sm:text-sm uppercase tracking-wider border-2 border-black hover:bg-yellow-400 transition-all shadow-md text-center block"
@@ -152,7 +152,7 @@ export default function SwagSection() {
 
             {/* CTA Button */}
             <a
-              href="https://tickets.devfestlagos.com/buy"
+              href="https://gdg.community.dev/events/details/google-gdg-port-harcourt-presents-devfest-port-harcourt-2026/cohost-gdg-port-harcourt/"
               target="_blank"
               rel="noopener noreferrer"
               className="w-full py-4 rounded-full bg-[#F5B82A] text-black font-akira font-black text-xs sm:text-sm uppercase tracking-wider border-2 border-black hover:bg-yellow-400 transition-all shadow-md text-center block"
