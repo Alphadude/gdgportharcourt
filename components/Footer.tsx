@@ -1,6 +1,5 @@
 // ─────────────────────────────────────────────────────────────────────────────
 // components/Footer.tsx
-// Redesigned Footer matching the official DevFest Lagos 2025 light-cream layout
 // ─────────────────────────────────────────────────────────────────────────────
 
 import Link from "next/link";
