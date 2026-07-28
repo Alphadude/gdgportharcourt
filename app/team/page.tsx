@@ -58,9 +58,9 @@ export default function TeamPage() {
               <div className="bg-white p-3 sm:p-4 rounded-sm shadow-2xl border border-black/10 w-44 sm:w-72 md:w-80">
                 <div className="aspect-[4/3] relative rounded-sm overflow-hidden bg-gray-200">
                   <img
-                    src="https://storage.googleapis.com/devfestlagos2025/Ruby/OG%20IMAGE.webp"
+                    src="/team.jpg"
                     alt="DevFest Team Moment"
-                    className="w-full h-full object-cover object-left"
+                    className="w-full h-full object-cover"
                   />
                 </div>
               </div>
@@ -71,9 +71,9 @@ export default function TeamPage() {
               <div className="bg-white p-3 sm:p-4 rounded-sm shadow-2xl border border-black/10 w-48 sm:w-80 md:w-96">
                 <div className="aspect-[4/3] relative rounded-sm overflow-hidden bg-gray-200">
                   <img
-                    src="https://storage.googleapis.com/devfestlagos2025/Ruby/OG%20IMAGE.webp"
+                    src="/team2.jpg"
                     alt="DevFest Organizers"
-                    className="w-full h-full object-cover object-center"
+                    className="w-full h-full object-cover"
                   />
                 </div>
               </div>
@@ -84,9 +84,9 @@ export default function TeamPage() {
               <div className="bg-white p-3 sm:p-4 rounded-sm shadow-2xl border border-black/10 w-44 sm:w-72 md:w-80">
                 <div className="aspect-[4/3] relative rounded-sm overflow-hidden bg-gray-200">
                   <img
-                    src="https://storage.googleapis.com/devfestlagos2025/Ruby/OG%20IMAGE.webp"
+                    src="/team1.jpg"
                     alt="DevFest Community"
-                    className="w-full h-full object-cover object-right"
+                    className="w-full h-full object-cover"
                   />
                 </div>
               </div>

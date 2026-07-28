@@ -18,7 +18,7 @@ export default function SponsorTicker({ sponsors }: SponsorTickerProps) {
     <section className="py-12 sm:py-16 overflow-hidden border-y border-black/10 bg-[#FAF7EE] w-full">
       <div className="max-w-7xl mx-auto px-4 text-center mb-8">
         <p className="font-akira text-xs sm:text-sm font-black uppercase tracking-widest text-gray-600">
-          OUR 2026 PARTNERS
+          OUR PAST PARTNERS
         </p>
       </div>
 

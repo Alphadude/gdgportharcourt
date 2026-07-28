@@ -12,7 +12,6 @@ import { faqs } from "@/lib/data/faqs";
 export default function FaqSection() {
   const [openId, setOpenId] = useState<string | null>(null);
 
-  // Top 4 FAQs for the homepage matching 2025.devfestlagos.com
   const homeFaqs = faqs.slice(0, 4);
 
   const toggle = (id: string) => {
@@ -42,7 +41,7 @@ export default function FaqSection() {
             {/* Center Community Avatar Stamp */}
             <div className="absolute inset-0 m-auto w-14 h-14 sm:w-20 sm:h-20 rounded-full bg-white border-2 border-black overflow-hidden shadow-inner flex items-center justify-center">
               <img
-                src="https://storage.googleapis.com/devfestlagos2025/Ruby/OG%20IMAGE.webp"
+                src="/public/gdg-logo.png"
                 alt="GDG Community"
                 className="w-full h-full object-cover"
               />
@@ -74,9 +73,8 @@ export default function FaqSection() {
               <div key={item.id} className="relative group">
                 {/* Speech Bubble Pill Card */}
                 <div
-                  className={`bg-[#FDF4CE] hover:bg-[#FDEEAA] rounded-2xl sm:rounded-3xl p-5 sm:p-6 border border-black/10 transition-all duration-200 ${
-                    isOpen ? "bg-[#FDEEAA] shadow-md" : "shadow-sm"
-                  }`}
+                  className={`bg-[#FDF4CE] hover:bg-[#FDEEAA] rounded-2xl sm:rounded-3xl p-5 sm:p-6 border border-black/10 transition-all duration-200 ${isOpen ? "bg-[#FDEEAA] shadow-md" : "shadow-sm"
+                    }`}
                 >
                   <button
                     id={`home-faq-btn-${item.id}`}
@@ -101,9 +99,8 @@ export default function FaqSection() {
                     id={`home-faq-panel-${item.id}`}
                     role="region"
                     aria-labelledby={`home-faq-btn-${item.id}`}
-                    className={`grid transition-all duration-300 ${
-                      isOpen ? "grid-rows-[1fr] mt-3 pt-3 border-t border-black/10" : "grid-rows-[0fr]"
-                    }`}
+                    className={`grid transition-all duration-300 ${isOpen ? "grid-rows-[1fr] mt-3 pt-3 border-t border-black/10" : "grid-rows-[0fr]"
+                      }`}
                   >
                     <div className="overflow-hidden">
                       <p className="text-gray-800 text-sm sm:text-base font-medium leading-relaxed">
