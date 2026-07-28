@@ -79,7 +79,7 @@ export const sponsors: Sponsor[] = [
   {
     id: "rustnigeria",
     name: "Rust Nigeria",
-    logoUrl: "/logo/RustNigeria.webp",
+    logoUrl: "/logo/RustNigeria.png",
     websiteUrl: "https://rustnigeria.org",
     tier: "community",
   },
