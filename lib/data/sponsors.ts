@@ -44,7 +44,7 @@ export const sponsors: Sponsor[] = [
   {
     id: "labtracka",
     name: "Labtracka",
-    logoUrl: "/logo/labtracka.webp",
+    logoUrl: "/logo/labtracka.png",
     websiteUrl: "https://labtracka.com",
     tier: "silver",
   },
