@@ -13,8 +13,8 @@ interface FaqAccordionProps {
 
 export default function FaqAccordion({ items }: FaqAccordionProps) {
   const categories = Array.from(
-    new Set(items.map((item) => item.category).filter((c): c is string => Boolean(c)))
-  );
+    new Set(items.map((item) => item.category as "general" | "tickets" | undefined))
+  ).filter((c): c is "general" | "tickets" => c !== undefined);
 
   const [activeCategory, setActiveCategory] = useState<string>(
     categories[0] ?? "general"
