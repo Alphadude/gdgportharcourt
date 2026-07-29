@@ -65,7 +65,7 @@ export const sponsors: Sponsor[] = [
   {
     id: "bamboo",
     name: "Bamboo",
-    logoUrl: "/logo/bamboo.png",
+    logoUrl: "/logo/bamboo.tiff",
     websiteUrl: "https://investbamboo.com",
     tier: "gold",
   },
