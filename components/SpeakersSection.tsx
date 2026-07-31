@@ -14,11 +14,11 @@ interface SpeakersSectionProps {
 
 const DAY_PILLS = [
   { label: "ALL", value: "all" },
-  { label: "TUE 24", value: 1 },
-  { label: "WED 25", value: 2 },
-  { label: "THU 26", value: 3 },
-  { label: "FRI 27", value: 4 },
-  { label: "SAT 28", value: 5 },
+  { label: "AUG 31", value: 1 },
+  { label: "SEP 01", value: 2 },
+  { label: "OCT 01", value: 3 },
+  { label: "NOV 01", value: 4 },
+  { label: "DEC 01", value: 5 },
 ];
 
 export default function SpeakersSection({ speakers }: SpeakersSectionProps) {
@@ -41,11 +41,10 @@ export default function SpeakersSection({ speakers }: SpeakersSectionProps) {
             <button
               key={pill.label}
               onClick={() => setActiveDay(pill.value)}
-              className={`font-akira font-black text-xs sm:text-sm px-7 sm:px-9 py-3 rounded-full uppercase tracking-wider transition-all duration-200 cursor-pointer ${
-                isActive
+              className={`font-akira font-black text-xs sm:text-sm px-7 sm:px-9 py-3 rounded-full uppercase tracking-wider transition-all duration-200 cursor-pointer ${isActive
                   ? "bg-[#F5B82A] text-black shadow-md scale-105"
                   : "bg-transparent text-white border border-white/40 hover:border-white hover:bg-white/5"
-              }`}
+                }`}
             >
               {pill.label}
             </button>
