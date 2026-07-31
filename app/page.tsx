@@ -7,6 +7,7 @@
 import type { Metadata } from "next";
 import HeroSection from "@/components/HeroSection";
 import SponsorTicker from "@/components/SponsorTicker";
+import CountdownTimer from "@/components/CountdownTimer";
 import SwagSection from "@/components/SwagSection";
 import SpeakersCarousel from "@/components/SpeakersCarousel";
 import MemoryLaneSection from "@/components/MemoryLaneSection";
@@ -29,6 +30,9 @@ export default function HomePage() {
 
       {/* ── Sponsor Ticker ─────────────────────────────────────────── */}
       <SponsorTicker sponsors={sponsors} />
+
+      {/* ── Countdown Timer ────────────────────────────────────────── */}
+      <CountdownTimer />
 
       {/* ── Swag Section (Purchasing DevFest Merch) ────────────────── */}
       <SwagSection />

@@ -22,7 +22,7 @@ export default function MemoryLaneSection() {
 
           <div className="flex flex-wrap items-center gap-4 pt-2">
             <a
-              href="https://youtube.com"
+              href="https://www.youtube.com/watch?v=2KGk2PXq1sY"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center px-8 py-3.5 rounded-full bg-[#F5B82A] text-black font-akira font-black text-xs sm:text-sm uppercase tracking-wider hover:bg-yellow-400 transition-all hover:scale-105 shadow-md border-2 border-black"
@@ -31,7 +31,7 @@ export default function MemoryLaneSection() {
             </a>
 
             <a
-              href="https://photos.google.com"
+              href="https://photos.app.goo.gl/P3e2dAzXQEekQVWRA"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center px-8 py-3.5 rounded-full bg-[#18181B] text-white font-akira font-black text-xs sm:text-sm uppercase tracking-wider hover:bg-gray-800 transition-all hover:scale-105 shadow-md border-2 border-black"
