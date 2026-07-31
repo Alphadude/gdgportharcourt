@@ -43,10 +43,12 @@ export default function TeamPage() {
               </p>
 
               <a
-                href="#the-team"
+                href="https://forms.gle/YUvPd2tDSPncnUEU8"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center px-8 py-3 rounded-full border-2 border-black bg-white text-black font-akira font-black text-xs uppercase tracking-wider hover:bg-gray-100 transition-all hover:scale-105 shadow-sm"
               >
-                SEE ALL
+                REGISTER AS A VOLUNTEER
               </a>
             </div>
           </div>

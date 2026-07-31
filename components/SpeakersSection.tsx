@@ -42,8 +42,8 @@ export default function SpeakersSection({ speakers }: SpeakersSectionProps) {
               key={pill.label}
               onClick={() => setActiveDay(pill.value)}
               className={`font-akira font-black text-xs sm:text-sm px-7 sm:px-9 py-3 rounded-full uppercase tracking-wider transition-all duration-200 cursor-pointer ${isActive
-                  ? "bg-[#F5B82A] text-black shadow-md scale-105"
-                  : "bg-transparent text-white border border-white/40 hover:border-white hover:bg-white/5"
+                ? "bg-[#F5B82A] text-black shadow-md scale-105"
+                : "bg-transparent text-white border border-white/40 hover:border-white hover:bg-white/5"
                 }`}
             >
               {pill.label}

@@ -6,19 +6,19 @@
 import { Session } from "@/lib/types";
 
 export const DAY_LABELS: Record<number, string> = {
-  1: "TUE 24",
-  2: "WED 25",
-  3: "THU 26",
-  4: "FRI 27",
-  5: "SAT 28",
+  1: "AUG 31",
+  2: "SEP 01",
+  3: "OCT 01",
+  4: "NOV 01",
+  5: "DEC 01",
 };
 
 export const DAY_TITLES: Record<number, string> = {
-  1: "STUDENT DAY",
-  2: "COMMUNITY DAY",
-  3: "WORKSHOP DAY",
-  4: "HACKATHON DAY",
-  5: "MAIN EVENT",
+  1: "GDGPHC INNOVATION DAY",
+  2: "GDGPHC AI DAY",
+  3: "GDGPHC DEVELOPER DAY",
+  4: "GDGPHC DEVFEST 2026 DAY",
+  5: "GDGPHC CLOSING DAY",
 };
 
 export const DAY_DESCRIPTIONS: Record<number, string> = {
@@ -148,7 +148,7 @@ export const sessions: Session[] = [
     title: "Flutter & Dart Masterclass: From Zero to Production App",
     startTime: "10:00 AM",
     endTime: "1:00 PM",
-    day: 3,
+    day: 4,
     track: "Mobile",
     room: "Workshop Room A",
     speakerIds: ["john-kimani"],
@@ -159,7 +159,7 @@ export const sessions: Session[] = [
     title: "High Performance Web Apps: Next.js 14 & Server Components",
     startTime: "1:30 PM",
     endTime: "2:30 PM",
-    day: 3,
+    day: 4,
     track: "Web",
     room: "Web Track Room",
     speakerIds: ["sodiq-akinjobi"],
