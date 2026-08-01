@@ -14,6 +14,7 @@ import MemoryLaneSection from "@/components/MemoryLaneSection";
 import FaqSection from "@/components/FaqSection";
 import CommunityBanner from "@/components/CommunityBanner";
 import TracksHeroBanner from "@/components/TracksHeroBanner";
+import TracksCarouselSection from "@/components/TracksCarouselSection";
 import Link from "next/link";
 import { speakers } from "@/lib/data/speakers";
 import { sponsors } from "@/lib/data/sponsors";
@@ -85,40 +86,8 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── Tracks Preview Grid ──────────────────────────────────────── */}
-      <section className="py-16 sm:py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full">
-        <div className="text-center mb-12">
-          <p className="text-google-blue text-xs sm:text-sm font-bold uppercase tracking-widest mb-3">
-            What To Expect
-          </p>
-          <h2 className="font-akira font-black text-3xl sm:text-5xl text-black tracking-tight uppercase leading-none">
-            5 DAYS · 20+ TRACKS
-          </h2>
-        </div>
-
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
-          {[
-            { name: "Artificial Intelligence", emoji: "🤖", color: "bg-[#D0F2FE]" },
-            { name: "Cloud & Infrastructure", emoji: "☁️", color: "bg-[#DCFCE7]" },
-            { name: "Mobile Development", emoji: "📱", color: "bg-[#FCE7F3]" },
-            { name: "Web Development", emoji: "🌐", color: "bg-[#FDF4CE]" },
-            { name: "DevOps & SRE", emoji: "⚙️", color: "bg-[#FEF08A]" },
-            { name: "Security & Privacy", emoji: "🔐", color: "bg-[#FFE4E6]" },
-            { name: "Open Source", emoji: "🧑‍💻", color: "bg-[#CFFAFE]" },
-            { name: "Startup & Product", emoji: "🚀", color: "bg-[#E0E7FF]" },
-          ].map((track) => (
-            <div
-              key={track.name}
-              className={`${track.color} border border-black/10 rounded-2xl p-6 hover:shadow-lg transition-all duration-300 hover:-translate-y-1`}
-            >
-              <div className="text-3xl sm:text-4xl mb-3">{track.emoji}</div>
-              <h3 className="font-akira font-extrabold text-xs sm:text-sm text-black leading-snug uppercase">
-                {track.name}
-              </h3>
-            </div>
-          ))}
-        </div>
-      </section>
+      {/* ── Tracks Carousel Section ──────────────────────────────────── */}
+      <TracksCarouselSection />
 
       {/* ── Tracks Hero Banner (Whatever you're into...) ─────────────── */}
       <TracksHeroBanner />
