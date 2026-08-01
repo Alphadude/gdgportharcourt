@@ -30,11 +30,11 @@ export const DAY_DESCRIPTIONS: Record<number, string> = {
 };
 
 export const DAY_BG_COLORS: Record<number, { tabBg: string; contentBg: string; titleColor: string }> = {
-  1: { tabBg: "bg-[#FDF4CE]", contentBg: "bg-[#FDF4CE]", titleColor: "text-[#D97706]" },
-  2: { tabBg: "bg-[#D0F2FE]", contentBg: "bg-[#D0F2FE]", titleColor: "text-[#0284C7]" },
-  3: { tabBg: "bg-[#FCE7F3]", contentBg: "bg-[#FCE7F3]", titleColor: "text-[#DB2777]" },
-  4: { tabBg: "bg-[#FEF9C3]", contentBg: "bg-[#FEF9C3]", titleColor: "text-[#CA8A04]" },
-  5: { tabBg: "bg-[#DCFCE7]", contentBg: "bg-[#DCFCE7]", titleColor: "text-[#16A34A]" },
+  1: { tabBg: "bg-[#FDF4CE]", contentBg: "bg-[#FDF4CE]", titleColor: "text-google-blue" },
+  2: { tabBg: "bg-[#D0F2FE]", contentBg: "bg-[#D0F2FE]", titleColor: "text-google-blue" },
+  3: { tabBg: "bg-[#FCE7F3]", contentBg: "bg-[#FCE7F3]", titleColor: "text-google-blue" },
+  4: { tabBg: "bg-[#FFE7A5]", contentBg: "bg-[#FFE7A5]", titleColor: "text-google-blue" },
+  5: { tabBg: "bg-[#DCFCE7]", contentBg: "bg-[#DCFCE7]", titleColor: "text-google-blue" },
 };
 
 export const sessions: Session[] = [
