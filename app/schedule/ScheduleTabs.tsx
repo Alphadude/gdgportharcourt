@@ -104,27 +104,17 @@ export default function ScheduleTabs({
           </div>
         </div>
 
-        {/* Sessions Cards List */}
-        <div className="space-y-4">
-          {currentSessions.length === 0 ? (
-            <div className="bg-white rounded-2xl p-12 text-center text-gray-500 font-medium">
-              No sessions scheduled for this day yet. Check back soon!
-            </div>
-          ) : (
-            currentSessions.map((session) => {
-              const sessionSpeakers = session.speakerIds
-                .map((id) => speakerMap[id])
-                .filter(Boolean) as Speaker[];
-
-              return (
-                <SessionCard
-                  key={session.id}
-                  session={session}
-                  speakers={sessionSpeakers}
-                />
-              );
-            })
-          )}
+        {/* Sessions Cards List - Replaced with Coming Soon */}
+        <div className="bg-white rounded-3xl p-16 sm:p-24 text-center shadow-sm border border-black/5">
+          <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-google-blue/10 mb-6">
+            <span className="text-3xl">🗓️</span>
+          </div>
+          <h3 className="font-akira font-black text-2xl sm:text-4xl text-black tracking-tight uppercase mb-4">
+            Schedule Coming Soon
+          </h3>
+          <p className="text-gray-500 text-base sm:text-lg max-w-lg mx-auto font-medium">
+            We are curating an amazing lineup of sessions and workshops for this day. Stay tuned for the full breakdown!
+          </p>
         </div>
       </div>
     </div>
