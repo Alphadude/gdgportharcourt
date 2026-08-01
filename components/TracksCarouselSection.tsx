@@ -10,6 +10,7 @@ const tracks = [
   { name: "Startup", image: "/tracks/thor.png", color: "bg-[#E0E7FF]", description: "Learn to build, launch, and scale successful tech startups." },
   { name: "DevOps", image: "/tracks/drdoom.png", color: "bg-[#FEF08A]", description: "Automate and streamline the software delivery pipeline." },
   { name: "Mobile Development", image: "/tracks/ultron.png", color: "bg-[#FCE7F3]", description: "Create high-performance apps for iOS and Android devices." },
+  { name: "Project Management", image: "/tracks/captainamerica.png", color: "bg-[#F3E8FF]", description: "Lead teams, define scope, and ensure successful delivery of tech products." },
 ];
 
 export default function TracksCarouselSection() {
