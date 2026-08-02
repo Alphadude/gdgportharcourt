@@ -33,7 +33,7 @@ export default function DpGenerator() {
   const [customRole, setCustomRole] = useState("");
   const [themeColor, setThemeColor] = useState(THEME_COLORS[0]);
   const [badgeText, setBadgeText] = useState("MORE COMMUNITY LESS EGO");
-  
+
   // Image transformation state
   const [imageSrc, setImageSrc] = useState<string | null>(null);
   const [scale, setScale] = useState(1);
@@ -234,7 +234,7 @@ export default function DpGenerator() {
 
   // Handle Social Share
   const shareText = `I just created my official DevFest Port Harcourt 2026 DP! Join 10,000+ developers on Nov 28th. Get yours now! 🚀`;
-  const shareUrl = "https://devfestportharcourt.com/dp-generator";
+  const shareUrl = "https://gdgportharcourt.com.ng/dp-generator";
 
   const shareOnTwitter = () => {
     window.open(
@@ -264,7 +264,7 @@ export default function DpGenerator() {
         {/* Canvas Preview Container */}
         <div className="relative w-full max-w-[480px] aspect-square rounded-3xl overflow-hidden shadow-2xl border-4 border-black bg-white group">
           <canvas ref={canvasRef} className="w-full h-full object-contain" />
-          
+
           {!imageSrc && (
             <div
               onDrop={handleDrop}
@@ -421,17 +421,16 @@ export default function DpGenerator() {
                   setRole(r);
                   setCustomRole("");
                 }}
-                className={`px-3.5 py-1.5 rounded-full text-xs font-akira font-bold uppercase tracking-wider transition-all border border-black/10 cursor-pointer ${
-                  role === r && !customRole
+                className={`px-3.5 py-1.5 rounded-full text-xs font-akira font-bold uppercase tracking-wider transition-all border border-black/10 cursor-pointer ${role === r && !customRole
                     ? "bg-[#18181B] text-white shadow-sm"
                     : "bg-gray-100 text-gray-800 hover:bg-gray-200"
-                }`}
+                  }`}
               >
                 {r}
               </button>
             ))}
           </div>
-          
+
           <input
             type="text"
             value={customRole}
@@ -454,11 +453,10 @@ export default function DpGenerator() {
                 type="button"
                 onClick={() => setThemeColor(color)}
                 style={{ backgroundColor: color.value }}
-                className={`w-9 h-9 rounded-full border-2 transition-transform cursor-pointer ${
-                  themeColor.value === color.value
+                className={`w-9 h-9 rounded-full border-2 transition-transform cursor-pointer ${themeColor.value === color.value
                     ? "scale-110 border-black shadow-md"
                     : "border-transparent opacity-80 hover:opacity-100"
-                }`}
+                  }`}
                 title={color.name}
               />
             ))}

@@ -53,9 +53,9 @@ export default function HomePage() {
             </p>
 
             <h2 className="font-akira font-black text-3xl sm:text-5xl lg:text-6xl text-white tracking-tight uppercase leading-[0.95]">
-              AFRICA&apos;S BIGGEST
+              THE BIGGEST
               <br />
-              TECH FESTIVAL
+              TECH FESTIVAL IN THE SOUTH
             </h2>
 
             <p className="text-gray-300 text-base sm:text-lg leading-relaxed font-medium">
