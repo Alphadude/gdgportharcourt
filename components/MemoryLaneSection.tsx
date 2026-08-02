@@ -9,39 +9,60 @@ import Image from "next/image";
 
 const MEMORY_IMAGES = [
   {
-    src: "/devfest2024.jpg",
+    src: "public/devfest-2025/community.jpg",
     alt: "DevFest Port Harcourt Audience & Keynote",
     title: "Electric Community Energy",
     caption: "Over 1,500+ developers, tech enthusiasts & founders in Port Harcourt",
     tag: "Mainstage",
   },
   {
-    src: "/team.jpg",
+    src: "public/devfest-2025/memories.jpg",
     alt: "DevFest Port Harcourt Organizing Team",
     title: "The Organizing Superstars",
     caption: "The passionate core team and leads bringing DevFest to life",
     tag: "Organizers",
   },
   {
-    src: "/team2.jpg",
+    src: "public/devfest-2025/energy.jpg",
     alt: "DevFest Keynotes & Tech Sessions",
     title: "World-Class Tech Sessions",
     caption: "Deep-dives into AI, Cloud, Mobile, Web & Open Source",
     tag: "Workshops",
   },
   {
-    src: "/team1.jpg",
+    src: "public/devfest-2025/speaker.jpg",
     alt: "DevFest Community & Volunteers",
     title: "Vibrant Tech Community",
     caption: "Connecting creators, networking, and building lasting friendships",
     tag: "Community",
   },
   {
-    src: "https://storage.googleapis.com/devfestlagos2025/Ruby/OG%20IMAGE.webp",
+    src: "public/devfest-2025/highlights.jpg",
     alt: "DevFest Festival Highlights",
     title: "Unforgettable Memories",
     caption: "A celebration of innovation, culture, and tech excellence",
     tag: "Highlights",
+  },
+  {
+    src: "public/devfest-2025/femalespeakers.jpg",
+    alt: "DevFest Festival Highlights",
+    title: "Unforgettable Memories",
+    caption: "A celebration of women in tech",
+    tag: "Women in Tech",
+  },
+  {
+    src: "public/devfest-2025/girls.jpg",
+    alt: "DevFest Festival Highlights",
+    title: "Unforgettable Memories",
+    caption: "A celebration of girls in tech",
+    tag: "Girls in Tech",
+  },
+  {
+    src: "public/devfest-2025/group.jpg",
+    alt: "DevFest Festival Highlights",
+    title: "Unforgettable Memories",
+    caption: "A celebration of community and innovation",
+    tag: "Community",
   },
 ];
 
@@ -259,11 +280,10 @@ export default function MemoryLaneSection() {
                     key={index}
                     onClick={() => goToSlide(index)}
                     aria-label={`Go to slide ${index + 1}`}
-                    className={`h-2.5 rounded-full transition-all duration-300 cursor-pointer ${
-                      currentIndex === index
+                    className={`h-2.5 rounded-full transition-all duration-300 cursor-pointer ${currentIndex === index
                         ? "w-8 bg-[#F5B82A]"
                         : "w-2.5 bg-white/30 hover:bg-white/60"
-                    }`}
+                      }`}
                   />
                 ))}
               </div>
