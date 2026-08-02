@@ -31,14 +31,14 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "GDG Port Harcourt" }],
   openGraph: {
-    title: "DevFest Port Harcourt 2026 | Tech & Developer Gathering",
+    title: "DevFest Port Harcourt 2026 | The Biggest Tech Festival In The South",
     description:
-      "AI, Cloud, DevOps, Mobile, and Web development. Join developers on November 28th, 2026 in Port Harcourt. Venue TBD.",
-    url: "https://devfestportharcourt.com",
+      "Explore AI, Cloud, DevOps, Mobile, Web development, Product Design & Data Analytics at DevFest Port Harcourt 2026.",
+    url: "https://gdgportharcourt.com.ng",
     siteName: "DevFest Port Harcourt 2026",
     images: [
       {
-        url: "https://storage.googleapis.com/devfestlagos2025/Ruby/OG%20IMAGE.webp",
+        url: "/gdg-logo.png",
         width: 1200,
         height: 630,
         alt: "DevFest Port Harcourt 2026",
@@ -49,13 +49,15 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "DevFest Port Harcourt 2026 | Tech & Developer Gathering",
+    title: "DevFest Port Harcourt 2026 | The Biggest Tech Festival In The South",
     description:
-      "Tech festival in Port Harcourt. Nov 28, 2026 · Venue TBD.",
-    images: ["https://storage.googleapis.com/devfestlagos2025/Ruby/OG%20IMAGE.webp"],
+      "The biggest tech festival in the South · AI, Cloud, DevOps, Mobile & Web in Port Harcourt.",
+    images: ["/gdg-logo.png"],
     creator: "@gdgportharcourt",
   },
-  metadataBase: new URL("https://2025.devfestlagos.com"),
+  metadataBase: new URL(
+    process.env.NEXT_PUBLIC_SITE_URL || "https://gdgportharcourt.com.ng"
+  ),
   robots: {
     index: true,
     follow: true,
