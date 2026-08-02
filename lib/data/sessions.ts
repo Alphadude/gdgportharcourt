@@ -6,11 +6,11 @@
 import { Session } from "@/lib/types";
 
 export const DAY_LABELS: Record<number, string> = {
-  1: "AUG 31",
-  2: "SEP 01",
-  3: "OCT 01",
-  4: "NOV 01",
-  5: "DEC 01",
+  1: "AUG 21",
+  2: "SEP 25",
+  3: "OCT 23",
+  4: "NOV 28",
+  5: "DEC 11",
 };
 
 export const DAY_TITLES: Record<number, string> = {

@@ -141,12 +141,22 @@ export default function Footer() {
                 <Link href="/faqs" className="block text-gray-900 hover:text-google-blue transition-colors">
                   FAQs
                 </Link>
-                <Link href="#" className="block text-gray-900 hover:text-google-blue transition-colors">
+                <a
+                  href="https://policies.google.com/privacy"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block text-gray-900 hover:text-google-blue transition-colors"
+                >
                   Privacy Policy
-                </Link>
-                <Link href="#" className="block text-gray-900 hover:text-google-blue transition-colors">
+                </a>
+                <a
+                  href="https://www.google.com/events/policy/anti-harassmentpolicy.html"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block text-gray-900 hover:text-google-blue transition-colors"
+                >
                   Community Guidelines
-                </Link>
+                </a>
                 <Link href="/brand-guidelines" className="block text-gray-900 hover:text-google-blue transition-colors">
                   Brand Guidelines
                 </Link>
@@ -155,9 +165,6 @@ export default function Footer() {
 
             {/* Col 2 */}
             <div className="space-y-4">
-              <Link href="#" className="block text-gray-900 hover:text-google-blue transition-colors">
-                Login
-              </Link>
               <a
                 href="https://gdg.community.dev/gdg-port-harcourt/"
                 target="_blank"
