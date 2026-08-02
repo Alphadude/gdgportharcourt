@@ -42,14 +42,14 @@ const config: Config = {
         },
         marquee: {
           "0%": { transform: "translateX(0%)" },
-          "100%": { transform: "translateX(-50%)" },
+          "100%": { transform: "translateX(-100%)" },
         },
       },
       animation: {
         "fade-in-up":  "fade-in-up 0.6s ease forwards",
         "pulse-slow":  "pulse-slow 4s ease-in-out infinite",
         ticker:        "ticker 30s linear infinite",
-        marquee:       "marquee 20s linear infinite",
+        marquee:       "marquee 45s linear infinite",
       },
 
       // ── Background gradient utility ─────────────────────────────────────────

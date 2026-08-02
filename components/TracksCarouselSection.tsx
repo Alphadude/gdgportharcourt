@@ -3,14 +3,16 @@ import Link from "next/link";
 
 const tracks = [
   { name: "Web Development", image: "/tracks/spiderman.png", color: "bg-[#FDF4CE]", description: "Build scalable and responsive modern web applications." },
+  { name: "Product Design", image: "/tracks/witch.png", color: "bg-[#FEE2E2]", description: "Craft intuitive, accessible, and delightful user interfaces and experiences." },
   { name: "Cyber Security", image: "/tracks/fury.png", color: "bg-[#FFE4E6]", description: "Protect systems, networks, and data from digital attacks." },
   { name: "Artificial Intelligence", image: "/tracks/vision.png", color: "bg-[#D0F2FE]", description: "Explore machine learning, neural networks, and AI solutions." },
-  { name: "Cloud Computing", image: "/tracks/iron_man.png", color: "bg-[#DCFCE7]", description: "Design and manage scalable cloud infrastructure and services." },
+  { name: "Data Analytics", image: "/tracks/hulk.png", color: "bg-[#DCFCE7]", description: "Uncover actionable insights, analyze metrics, and power data-driven decisions." },
+  { name: "Cloud Computing", image: "/tracks/iron_man.png", color: "bg-[#E0E7FF]", description: "Design and manage scalable cloud infrastructure and services." },
   { name: "Open Source", image: "/tracks/drstrange.png", color: "bg-[#CFFAFE]", description: "Contribute to and leverage the power of open-source projects." },
-  { name: "Startup", image: "/tracks/thor.png", color: "bg-[#E0E7FF]", description: "Learn to build, launch, and scale successful tech startups." },
+  { name: "Startup", image: "/tracks/thor.png", color: "bg-[#F3E8FF]", description: "Learn to build, launch, and scale successful tech startups." },
   { name: "DevOps", image: "/tracks/drdoom.png", color: "bg-[#FEF08A]", description: "Automate and streamline the software delivery pipeline." },
   { name: "Mobile Development", image: "/tracks/ultron.png", color: "bg-[#FCE7F3]", description: "Create high-performance apps for iOS and Android devices." },
-  { name: "Project Management", image: "/tracks/captainamerica.png", color: "bg-[#F3E8FF]", description: "Lead teams, define scope, and ensure successful delivery of tech products." },
+  { name: "Project Management", image: "/tracks/captainamerica.png", color: "bg-[#F5F3FF]", description: "Lead teams, define scope, and ensure successful delivery of tech products." },
 ];
 
 export default function TracksCarouselSection() {
@@ -31,12 +33,12 @@ export default function TracksCarouselSection() {
       </div>
 
       {/* Full-width Carousel */}
-      <div className="w-full relative py-4 flex flex-col items-center">
-        <div className="flex w-max animate-marquee hover:[animation-play-state:paused]">
-          {/* Duplicate tracks array for seamless infinite scroll */}
-          {[...tracks, ...tracks].map((track, i) => (
-            <div key={i} className="flex-none w-[280px] sm:w-[320px] lg:w-[360px] px-3 sm:px-4">
-              <div className={`relative h-[400px] sm:h-[450px] rounded-3xl flex flex-col items-center justify-end p-4 sm:p-6 ${track.color} overflow-hidden shadow-xl border border-black/5 group cursor-pointer`}>
+      <div className="w-full relative py-4 flex overflow-hidden group">
+        {/* Track Strip 1 */}
+        <div className="flex shrink-0 animate-marquee items-center group-hover:[animation-play-state:paused] will-change-transform">
+          {tracks.map((track, i) => (
+            <div key={`track-1-${i}`} className="flex-none w-[280px] sm:w-[320px] lg:w-[360px] px-3 sm:px-4">
+              <div className={`relative h-[400px] sm:h-[450px] rounded-3xl flex flex-col items-center justify-end p-4 sm:p-6 ${track.color} overflow-hidden shadow-xl border border-black/5 group/card cursor-pointer`}>
                 
                 {/* Character Image */}
                 <div className="absolute inset-x-0 top-0 h-3/5 w-full">
@@ -44,12 +46,43 @@ export default function TracksCarouselSection() {
                     src={track.image} 
                     alt={track.name} 
                     fill 
-                    className="object-contain object-bottom transition-transform duration-500 group-hover:scale-110 drop-shadow-xl p-4" 
+                    className="object-contain object-bottom transition-transform duration-500 group-hover/card:scale-110 drop-shadow-xl p-4" 
                   />
                 </div>
                 
                 {/* Text Content Card */}
-                <div className="relative z-10 w-full bg-white/70 backdrop-blur-md rounded-2xl p-4 sm:p-5 mt-auto border border-white/50 transform transition-transform duration-300 group-hover:-translate-y-2 text-center shadow-lg">
+                <div className="relative z-10 w-full bg-white/70 backdrop-blur-md rounded-2xl p-4 sm:p-5 mt-auto border border-white/50 transform transition-transform duration-300 group-hover/card:-translate-y-2 text-center shadow-lg">
+                  <h3 className="font-akira font-black text-sm sm:text-base text-black tracking-tight uppercase mb-2 line-clamp-1">
+                      {track.name}
+                  </h3>
+                  <p className="text-black/80 text-xs sm:text-sm font-medium leading-relaxed line-clamp-3">
+                      {track.description}
+                  </p>
+                </div>
+
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Track Strip 2 (Identical for uninterrupted infinite loop) */}
+        <div className="flex shrink-0 animate-marquee items-center group-hover:[animation-play-state:paused] will-change-transform" aria-hidden="true">
+          {tracks.map((track, i) => (
+            <div key={`track-2-${i}`} className="flex-none w-[280px] sm:w-[320px] lg:w-[360px] px-3 sm:px-4">
+              <div className={`relative h-[400px] sm:h-[450px] rounded-3xl flex flex-col items-center justify-end p-4 sm:p-6 ${track.color} overflow-hidden shadow-xl border border-black/5 group/card cursor-pointer`}>
+                
+                {/* Character Image */}
+                <div className="absolute inset-x-0 top-0 h-3/5 w-full">
+                  <Image 
+                    src={track.image} 
+                    alt={track.name} 
+                    fill 
+                    className="object-contain object-bottom transition-transform duration-500 group-hover/card:scale-110 drop-shadow-xl p-4" 
+                  />
+                </div>
+                
+                {/* Text Content Card */}
+                <div className="relative z-10 w-full bg-white/70 backdrop-blur-md rounded-2xl p-4 sm:p-5 mt-auto border border-white/50 transform transition-transform duration-300 group-hover/card:-translate-y-2 text-center shadow-lg">
                   <h3 className="font-akira font-black text-sm sm:text-base text-black tracking-tight uppercase mb-2 line-clamp-1">
                       {track.name}
                   </h3>
