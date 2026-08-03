@@ -13,6 +13,7 @@ export interface Speaker {
   twitter?: string;
   linkedin?: string;
   tags?: string[]; // e.g. ["AI", "Web"]
+  day?: number;
 }
 
 export interface Session {

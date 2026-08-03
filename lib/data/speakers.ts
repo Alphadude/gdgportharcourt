@@ -13,6 +13,7 @@ export const speakers: Speaker[] = [
     company: "Company Name",
     imageUrl: "/speakers/black-speaker.png",
     tags: ["Web"],
+    day: 1,
   },
   {
     id: "odun-eweniyi",
@@ -21,6 +22,7 @@ export const speakers: Speaker[] = [
     company: "Company Name",
     imageUrl: "/speakers/black-speaker.png",
     tags: ["Web"],
+    day: 1,
   },
   {
     id: "thomas-steiner",
@@ -29,6 +31,7 @@ export const speakers: Speaker[] = [
     company: "Company Name",
     imageUrl: "/speakers/black-speaker.png",
     tags: ["Web"],
+    day: 1,
   },
   {
     id: "oluwadunni-fanibe",
@@ -37,6 +40,7 @@ export const speakers: Speaker[] = [
     company: "Company Name",
     imageUrl: "/speakers/black-speaker.png",
     tags: ["Web"],
+    day: 1,
   },
   {
     id: "sodiq-akinjobi",
@@ -45,6 +49,7 @@ export const speakers: Speaker[] = [
     company: "Company Name",
     imageUrl: "/speakers/black-speaker.png",
     tags: ["Web"],
+    day: 2,
   },
   {
     id: "oleg-aravin",
@@ -53,6 +58,7 @@ export const speakers: Speaker[] = [
     company: "Company Name",
     imageUrl: "/speakers/black-speaker.png",
     tags: ["Startup"],
+    day: 2,
   },
   {
     id: "john-kimani",
@@ -61,6 +67,7 @@ export const speakers: Speaker[] = [
     company: "Company Name",
     imageUrl: "/speakers/black-speaker.png",
     tags: ["Mobile", "Cloud"],
+    day: 2,
   },
   {
     id: "funke-olasupo",
@@ -69,6 +76,7 @@ export const speakers: Speaker[] = [
     company: "Company Name",
     imageUrl: "/speakers/black-speaker.png",
     tags: ["Startup"],
+    day: 2,
   },
   {
     id: "folarin-aiyegbusi",
@@ -77,6 +85,7 @@ export const speakers: Speaker[] = [
     company: "Company Name",
     imageUrl: "/speakers/black-speaker.png",
     tags: ["Mobile"],
+    day: 3,
   },
   {
     id: "femi-taiwo",
@@ -85,6 +94,7 @@ export const speakers: Speaker[] = [
     company: "Company Name",
     imageUrl: "/speakers/black-speaker.png",
     tags: ["Cloud"],
+    day: 3,
   },
   {
     id: "chuka-ofili",
@@ -93,6 +103,7 @@ export const speakers: Speaker[] = [
     company: "Company Name",
     imageUrl: "/speakers/black-speaker.png",
     tags: ["Cloud"],
+    day: 3,
   },
   {
     id: "amarachi-iheanacho",
@@ -101,6 +112,7 @@ export const speakers: Speaker[] = [
     company: "Company Name",
     imageUrl: "/speakers/black-speaker.png",
     tags: ["AI/ML"],
+    day: 3,
   },
   {
     id: "samson-goddy",
@@ -109,6 +121,7 @@ export const speakers: Speaker[] = [
     company: "Company Name",
     imageUrl: "/speakers/black-speaker.png",
     tags: ["Open Source"],
+    day: 4,
   },
   {
     id: "kofo-okesola",
@@ -117,6 +130,7 @@ export const speakers: Speaker[] = [
     company: "Company Name",
     imageUrl: "/speakers/black-speaker.png",
     tags: ["Web3", "Cloud"],
+    day: 4,
   },
   {
     id: "bernard-parah",
@@ -125,6 +139,7 @@ export const speakers: Speaker[] = [
     company: "Company Name",
     imageUrl: "/speakers/black-speaker.png",
     tags: ["Startup"],
+    day: 4,
   },
   {
     id: "winifred-ekwunife",
@@ -133,6 +148,7 @@ export const speakers: Speaker[] = [
     company: "Company Name",
     imageUrl: "/speakers/black-speaker.png",
     tags: ["Cloud", "DevOps"],
+    day: 4,
   },
   {
     id: "mustapha-adekunle",
@@ -141,6 +157,7 @@ export const speakers: Speaker[] = [
     company: "Company Name",
     imageUrl: "/speakers/black-speaker.png",
     tags: ["Security"],
+    day: 5,
   },
   {
     id: "goodness-ukeje",
@@ -149,6 +166,7 @@ export const speakers: Speaker[] = [
     company: "Company Name",
     imageUrl: "/speakers/black-speaker.png",
     tags: ["Web", "Open Source"],
+    day: 5,
   },
   {
     id: "shodipo-ayomide",
@@ -157,6 +175,7 @@ export const speakers: Speaker[] = [
     company: "Company Name",
     imageUrl: "/speakers/black-speaker.png",
     tags: ["Web", "Open Source"],
+    day: 5,
   },
   {
     id: "daniel-umoren",
@@ -165,6 +184,7 @@ export const speakers: Speaker[] = [
     company: "Company Name",
     imageUrl: "/speakers/black-speaker.png",
     tags: ["Web"],
+    day: 5,
   },
 ];
 
