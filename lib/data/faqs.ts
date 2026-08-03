@@ -56,20 +56,6 @@ export const faqs: FaqItem[] = [
     category: "general",
   },
   {
-    id: "ticket-types",
-    question: "What ticket types are available?",
-    answer:
-      "We offer multiple ticket tiers: Limited Free Community Passes, Standard Passes, and VIP Passes (includes priority workshop access, exclusive swag, and speaker networking area).",
-    category: "general",
-  },
-  {
-    id: "refund",
-    question: "What is the refund policy?",
-    answer:
-      "Tickets are non-refundable, but they are fully transferable to another attendee up to 48 hours prior to the event date.",
-    category: "general",
-  },
-  {
     id: "sponsor",
     question: "How can my company sponsor DevFest Port Harcourt 2026?",
     answer:
