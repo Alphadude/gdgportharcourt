@@ -1,6 +1,8 @@
 import { ImageResponse } from "next/og";
+import { readFile } from "node:fs/promises";
+import { join } from "node:path";
 
-export const runtime = "edge";
+export const runtime = "nodejs";
 export const alt = "DevFest Port Harcourt 2026 - The Biggest Tech Festival In The South";
 export const size = {
   width: 1200,
@@ -9,6 +11,10 @@ export const size = {
 export const contentType = "image/png";
 
 export default async function OpenGraphImage() {
+  // Load public/gdg-logo.png as Base64 Data URL
+  const logoBuffer = await readFile(join(process.cwd(), "public", "gdg-logo.png"));
+  const logoSrc = `data:image/png;base64,${logoBuffer.toString("base64")}`;
+
   return new ImageResponse(
     (
       <div
@@ -79,13 +85,19 @@ export default async function OpenGraphImage() {
               boxShadow: "0 12px 30px rgba(0, 0, 0, 0.4)",
               marginBottom: "24px",
               border: "3px solid #F5B82A",
+              overflow: "hidden",
             }}
           >
-            <svg width="68" height="68" viewBox="0 0 192 192" fill="none">
-              <path d="M48 64L16 96L48 128" stroke="#4285F4" strokeWidth="20" strokeLinecap="round" strokeLinejoin="round" />
-              <path d="M144 64L176 96L144 128" stroke="#EA4335" strokeWidth="20" strokeLinecap="round" strokeLinejoin="round" />
-              <path d="M112 48L80 144" stroke="#34A853" strokeWidth="20" strokeLinecap="round" />
-            </svg>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src={logoSrc}
+              alt="GDG Logo"
+              width="80"
+              height="80"
+              style={{
+                objectFit: "contain",
+              }}
+            />
           </div>
 
           {/* Badge Pill */}
@@ -105,7 +117,7 @@ export default async function OpenGraphImage() {
               marginBottom: "18px",
             }}
           >
-            ★ DEVFEST PORT HARCOURT 2026 ★
+            DEVFEST PORT HARCOURT 2026
           </div>
 
           {/* Heading */}

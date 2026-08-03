@@ -37,14 +37,6 @@ export const metadata: Metadata = {
       "Explore AI, Cloud, DevOps, Mobile, Web development, Product Design & Data Analytics at DevFest Port Harcourt 2026.",
     url: "https://gdgportharcourt.com.ng",
     siteName: "DevFest Port Harcourt 2026",
-    images: [
-      {
-        url: "/gdg-logo.png",
-        width: 1200,
-        height: 630,
-        alt: "DevFest Port Harcourt 2026",
-      },
-    ],
     locale: "en_NG",
     type: "website",
   },
@@ -53,7 +45,6 @@ export const metadata: Metadata = {
     title: "DevFest Port Harcourt 2026 | The Biggest Tech Festival In The South",
     description:
       "The biggest tech festival in the South · AI, Cloud, DevOps, Mobile & Web in Port Harcourt.",
-    images: ["/gdg-logo.png"],
     creator: "@gdgportharcourt",
   },
   metadataBase: new URL(
