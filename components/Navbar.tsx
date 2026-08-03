@@ -79,7 +79,7 @@ export default function Navbar() {
               rel="noopener noreferrer"
               className="px-6 py-2 rounded-full bg-[#F5B82A] text-black font-akira font-black text-xs border-2 border-black hover:bg-yellow-400 transition-all hover:scale-105 shadow-sm uppercase tracking-wider"
             >
-              FREE REGISTRATION
+              REGISTER
             </a>
           </div>
 
@@ -154,7 +154,7 @@ export default function Navbar() {
             rel="noopener noreferrer"
             className="w-full text-center block px-6 py-3 rounded-full bg-[#F5B82A] text-black font-akira font-bold text-xs border-2 border-black hover:bg-yellow-400 transition-all uppercase tracking-wider"
           >
-            FREE REGISTRATION
+            REGISTER
           </a>
         </div>
       </aside>

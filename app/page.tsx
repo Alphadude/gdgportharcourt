@@ -70,9 +70,9 @@ export default function HomePage() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center px-8 py-3.5 rounded-full bg-[#F5B82A] text-black font-akira font-black text-xs sm:text-sm uppercase tracking-wider hover:bg-yellow-400 transition-all hover:scale-105 shadow-md border-2 border-black"
-                id="about-free-registration"
+                id="about-registration"
               >
-                FREE REGISTRATION
+                REGISTER
               </a>
               <Link
                 href="/schedule"

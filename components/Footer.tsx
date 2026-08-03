@@ -69,7 +69,7 @@ export default function Footer() {
         {/* ── Top Header Section with Big Typography & Badge ───────────────── */}
         <div className="relative flex flex-col md:flex-row items-start md:items-center justify-between gap-8 mb-16">
           <div className="flex-1">
-            {/* DEVFEST + Inline Free Registration Pill */}
+            {/* DEVFEST + Inline Registration Pill */}
             <div className="flex flex-wrap items-center gap-4 sm:gap-6">
               <h2 className="font-akira text-[clamp(2.5rem,7.5vw,6rem)] font-black leading-none tracking-tight text-black">
                 DEVFEST
@@ -80,7 +80,7 @@ export default function Footer() {
                 rel="noopener noreferrer"
                 className="inline-flex items-center px-6 py-3 rounded-full bg-[#F5B82A] text-black font-akira text-xs sm:text-sm font-bold border-2 border-black hover:bg-yellow-400 transition-all hover:scale-105 shadow-sm uppercase tracking-wider"
               >
-                FREE REGISTRATION
+                REGISTER
               </a>
             </div>
 

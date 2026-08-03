@@ -46,7 +46,7 @@ export default function SpeakersSection({ speakers }: SpeakersSectionProps) {
 
         <div className="flex items-center gap-3 shrink-0">
           <a
-            href="https://gdg.community.dev/events/details/google-gdg-port-harcourt-presents-devfest-port-harcourt-2026/cohost-gdg-port-harcourt/"
+            href="https://docs.google.com/presentation/d/13uvnh9dXp1mFqMYBSD5WD7YOd-g7aCHlcYfEjnV03OM/edit?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2.5 px-6 sm:px-8 py-3.5 sm:py-4 rounded-full bg-google-blue hover:bg-blue-600 text-white font-akira font-black text-xs sm:text-sm uppercase tracking-wider transition-all duration-200 hover:scale-105 shadow-lg border-2 border-white/20 hover:border-white"
@@ -95,7 +95,7 @@ export default function SpeakersSection({ speakers }: SpeakersSectionProps) {
             Stay tuned or apply to speak on this track!
           </p>
           <a
-            href="https://gdg.community.dev/events/details/google-gdg-port-harcourt-presents-devfest-port-harcourt-2026/cohost-gdg-port-harcourt/"
+            href="https://docs.google.com/presentation/d/13uvnh9dXp1mFqMYBSD5WD7YOd-g7aCHlcYfEjnV03OM/edit?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#F5B82A] text-black font-akira font-bold text-xs uppercase tracking-wider hover:bg-yellow-400 transition-transform hover:scale-105"
@@ -116,7 +116,7 @@ export default function SpeakersSection({ speakers }: SpeakersSectionProps) {
           </p>
         </div>
         <a
-          href="https://gdg.community.dev/events/details/google-gdg-port-harcourt-presents-devfest-port-harcourt-2026/cohost-gdg-port-harcourt/"
+          href="https://docs.google.com/presentation/d/13uvnh9dXp1mFqMYBSD5WD7YOd-g7aCHlcYfEjnV03OM/edit?usp=sharing"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center gap-2.5 px-8 py-4 rounded-full bg-[#F5B82A] hover:bg-yellow-400 text-black font-akira font-black text-xs sm:text-sm uppercase tracking-wider transition-all duration-200 hover:scale-105 shadow-xl border-2 border-black shrink-0"
