@@ -10,7 +10,7 @@ import { faqs } from "@/lib/data/faqs";
 export const metadata: Metadata = {
   title: "FAQs",
   description:
-    "Frequently asked questions about DevFest Port Harcourt 2026 — tickets, venue, schedule, sponsorship, and more.",
+    "Frequently asked questions about DevFest Port Harcourt 2026 — free registration, venue, schedule, sponsorship, and more.",
 };
 
 export default function FaqsPage() {
@@ -38,9 +38,9 @@ export default function FaqsPage() {
               {/* Center Community Avatar Stamp */}
               <div className="absolute inset-0 m-auto w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-white border-2 border-black overflow-hidden shadow-inner flex items-center justify-center">
                 <img
-                  src="https://storage.googleapis.com/devfestlagos2025/Ruby/OG%20IMAGE.webp"
+                  src="/gdg-logo.png"
                   alt="GDG Community"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-contain p-2"
                 />
               </div>
             </div>

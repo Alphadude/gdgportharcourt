@@ -49,10 +49,17 @@ export const faqs: FaqItem[] = [
     category: "general",
   },
   {
+    id: "is-devfest-free",
+    question: "Is DevFest Port Harcourt 2026 free to attend?",
+    answer:
+      "Yes! DevFest Port Harcourt 2026 is 100% free to attend for all participants. All you need to do is register online to secure your spot.",
+    category: "general",
+  },
+  {
     id: "register",
     question: "How can I register for DevFest Port Harcourt 2026?",
     answer:
-      "You can register directly on our official event page by clicking any of the REGISTER buttons on this site.",
+      "Registration is completely free! You can register directly on our official event page by clicking any of the REGISTER buttons on this site.",
     category: "general",
   },
   {

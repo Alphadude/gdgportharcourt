@@ -60,7 +60,7 @@ export default function HomePage() {
 
             <p className="text-gray-300 text-base sm:text-lg leading-relaxed font-medium">
               DevFest Port Harcourt 2026 is organized by Google Developer Group (GDG) Port Harcourt.
-              An action-packed gathering covering AI, Cloud, Mobile, Web, DevOps, Security, and Open Source —
+              An action-packed, 100% free gathering covering AI, Cloud, Mobile, Web, DevOps, Security, and Open Source —
               taking place on <strong className="text-white font-bold">November 28th, 2026</strong> at <strong className="text-white font-bold">Venue TBD</strong>.
             </p>
 
@@ -70,9 +70,9 @@ export default function HomePage() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center px-8 py-3.5 rounded-full bg-[#F5B82A] text-black font-akira font-black text-xs sm:text-sm uppercase tracking-wider hover:bg-yellow-400 transition-all hover:scale-105 shadow-md border-2 border-black"
-                id="about-buy-tickets"
+                id="about-free-registration"
               >
-                REGISTER
+                FREE REGISTRATION
               </a>
               <Link
                 href="/schedule"

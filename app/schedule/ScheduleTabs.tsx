@@ -88,7 +88,7 @@ export default function ScheduleTabs({
             </h2>
           </div>
 
-          {/* Right Description & BUY TICKET Pill */}
+          {/* Right Description & Free Registration Pill */}
           <div className="max-w-md flex flex-col items-start md:items-end text-left md:text-right gap-3">
             <p className="text-gray-800 text-sm font-medium leading-relaxed">
               {activeDescription}
@@ -99,7 +99,7 @@ export default function ScheduleTabs({
               rel="noopener noreferrer"
               className="inline-flex items-center px-6 py-2.5 rounded-full bg-[#F5B82A] text-black font-akira text-xs font-bold border-2 border-black hover:bg-yellow-400 transition-all hover:scale-105 shadow-sm uppercase tracking-wider"
             >
-              REGISTER
+              FREE REGISTRATION
             </a>
           </div>
         </div>

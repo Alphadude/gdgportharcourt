@@ -25,7 +25,7 @@ export default function SwagSection() {
           </h2>
 
           <p className="text-gray-400 font-sans text-sm sm:text-base text-center mt-4 max-w-2xl font-medium leading-relaxed">
-            Get official DevFest Port Harcourt merchandise — exclusive hoodies, t-shirts, caps, stickers, and swag bags. Select the package that works best for you:
+            <span className="text-emerald-400 font-bold">DevFest Port Harcourt 2026 is 100% free to attend!</span> Get official DevFest merchandise — exclusive hoodies, t-shirts, caps, stickers, and swag bags. Select an optional swag package below:
           </p>
         </div>
 

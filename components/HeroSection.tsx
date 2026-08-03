@@ -16,7 +16,7 @@ export default function HeroSection() {
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-8 mb-12">
           {/* Big Typography Column */}
           <div className="flex-1">
-            {/* DEVFEST + Inline Buy Tickets Pill */}
+            {/* DEVFEST + Inline Free Registration Pill */}
             <div className="flex flex-wrap items-center gap-4 sm:gap-6">
               <h1 className="font-akira text-[clamp(3rem,9vw,7.5rem)] font-black leading-none tracking-tight text-black">
                 DEVFEST
@@ -27,7 +27,7 @@ export default function HeroSection() {
                 rel="noopener noreferrer"
                 className="inline-flex items-center px-6 py-3 rounded-full bg-[#F5B82A] text-black font-akira text-xs sm:text-sm font-bold border-2 border-black hover:bg-yellow-400 transition-all hover:scale-105 shadow-sm uppercase tracking-wider"
               >
-                REGISTER
+                FREE REGISTRATION
               </a>
             </div>
 
@@ -67,10 +67,13 @@ export default function HeroSection() {
         {/* Subtitle & Date Location Badges */}
         <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 pt-6 border-t border-black/10">
           <p className="text-gray-800 text-lg sm:text-xl font-medium max-w-xl leading-relaxed">
-            Tech &amp; developer gathering — AI, Cloud, Mobile, Web &amp; DevOps in Port Harcourt. Venue TBD.
+            Tech &amp; developer gathering (100% Free) — AI, Cloud, Mobile, Web &amp; DevOps in Port Harcourt. Venue TBD.
           </p>
 
           <div className="flex items-center gap-3">
+            <span className="px-5 py-2.5 rounded-full bg-emerald-600 text-white font-sans text-xs font-bold uppercase tracking-wider">
+              100% Free Event
+            </span>
             <span className="px-5 py-2.5 rounded-full bg-black text-white font-sans text-xs font-bold uppercase tracking-wider">
               28 Nov, 2026
             </span>
