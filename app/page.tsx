@@ -120,7 +120,7 @@ export default function HomePage() {
               BECOME A SPONSOR →
             </a>
             <a
-              href="https://forms.gle/Vn5LiWTzittEPez46"
+              href="https://forms.gle/48otTTzPB2ezHpqh9"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center px-9 py-4 rounded-full bg-white text-black font-akira font-black text-xs sm:text-sm uppercase tracking-wider hover:bg-gray-100 transition-all hover:scale-105 shadow-md border-2 border-black"
