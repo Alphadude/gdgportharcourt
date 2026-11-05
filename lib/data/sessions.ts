@@ -139,6 +139,18 @@ export const sessions: Session[] = [
 
   // ── Day 4 (NOV 28) — DevFest Main Stage (Platinum Hall, Lemaco Gardens) ────
   {
+    id: "d4-opening-keynote-chinda",
+    title: "Keynote Address: Accelerating South-South Nigeria's Digital Economy & Youth Tech Empowerment",
+    description: "Special Keynote Address by Hon. O.K. Chinda on advancing digital infrastructure, fostering youth tech capacity, and strengthening public-private partnerships across Rivers State.",
+    startTime: "9:00 AM",
+    endTime: "9:30 AM",
+    day: 4,
+    track: "General",
+    room: "Grand Auditorium",
+    speakerIds: ["ok-chinda"],
+    type: "keynote",
+  },
+  {
     id: "d4-solo-developer-keynote",
     title: "From Idea to Income: How a Solo Developer Can Build and Monetize Mobile Apps with AI and RevenueCat",
     description: "Keynote presentation on practical workflows taking a mobile app from idea to launch as a one-person development team, validating market demand, and building sustainable subscription revenue.",

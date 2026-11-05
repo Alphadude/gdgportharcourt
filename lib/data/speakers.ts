@@ -8,6 +8,18 @@ import { Speaker } from "@/lib/types";
 
 export const speakers: Speaker[] = [
   {
+    id: "ok-chinda",
+    name: "Hon. O.K. Chinda",
+    title: "Keynote Speaker & Minority Leader",
+    company: "House of Representatives, National Assembly",
+    imageUrl: "/speakers/ok-chinda.jpg",
+    bio: "Hon. Kingsley Ogundu Chinda (popularly known as O.K. Chinda) is a distinguished Nigerian legislator, legal practitioner, and public policy leader. He represents the Obio/Akpor Federal Constituency of Rivers State in Nigeria's National Assembly, where he serves as the Minority Leader of the House of Representatives.\n\nThroughout his legislative career, Hon. Chinda has been an ardent champion for digital literacy, youth-driven economic modernization, and sustainable infrastructure investments in Rivers State and the Niger Delta region.\n\nAt DevFest Port Harcourt 2026, Hon. O.K. Chinda joins the tech community to deliver a visionary Keynote Address on accelerating digital capacity, supporting grassroots technical talent, and creating public-private synergies that drive the South-South tech revolution.",
+    twitter: "https://x.com/OKChinda",
+    linkedin: "https://okchinda.org",
+    tags: ["Keynote", "Governance", "Leadership"],
+    day: 4,
+  },
+  {
     id: "paul-jeremiah",
     name: "Paul Jeremiah",
     title: "Indie Hacker",
