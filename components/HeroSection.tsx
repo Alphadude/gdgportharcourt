@@ -16,24 +16,24 @@ export default function HeroSection() {
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-8 mb-12">
           {/* Big Typography Column */}
           <div className="flex-1">
-            {/* DEVFEST + Inline Registration Pill */}
-            <div className="flex flex-wrap items-center gap-4 sm:gap-6">
-              <h1 className="font-akira text-[clamp(3rem,9vw,7.5rem)] font-black leading-none tracking-tight text-black">
-                DEVFEST
-              </h1>
-              <a
-                href="https://gdg.community.dev/events/details/google-gdg-port-harcourt-presents-devfest-port-harcourt-2026/cohost-gdg-port-harcourt/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center px-6 py-3 rounded-full bg-[#F5B82A] text-black font-akira text-xs sm:text-sm font-bold border-2 border-black hover:bg-yellow-400 transition-all hover:scale-105 shadow-sm uppercase tracking-wider"
-              >
-                REGISTER
-              </a>
-            </div>
-
-            {/* PORT HARCOURT 2026 */}
-            <h1 className="font-akira text-[clamp(2.5rem,7vw,6rem)] font-black leading-none tracking-tight text-black mt-2">
-              PORT HARCOURT 2026
+            {/* Single Semantic H1: DEVFEST PORT HARCOURT 2026 */}
+            <h1 className="font-akira tracking-tight text-black">
+              <span className="flex flex-wrap items-center gap-4 sm:gap-6">
+                <span className="text-[clamp(3rem,9vw,7.5rem)] font-black leading-none">
+                  DEVFEST
+                </span>
+                <a
+                  href="https://gdg.community.dev/events/details/google-gdg-port-harcourt-presents-devfest-port-harcourt-2026/cohost-gdg-port-harcourt/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center px-6 py-3 rounded-full bg-[#F5B82A] text-black text-xs sm:text-sm font-bold border-2 border-black hover:bg-yellow-400 transition-all hover:scale-105 shadow-sm uppercase tracking-wider"
+                >
+                  REGISTER
+                </a>
+              </span>
+              <span className="block text-[clamp(2.5rem,7vw,6rem)] font-black leading-none mt-2">
+                PORT HARCOURT 2026
+              </span>
             </h1>
           </div>
 
@@ -67,7 +67,7 @@ export default function HeroSection() {
         {/* Subtitle & Date Location Badges */}
         <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 pt-6 border-t border-black/10">
           <p className="text-gray-800 text-lg sm:text-xl font-medium max-w-xl leading-relaxed">
-            Tech &amp; developer gathering (100% Free) — AI, Cloud, Mobile, Web &amp; DevOps in Port Harcourt. Venue TBD.
+            Tech &amp; developer gathering (100% Free) — AI, Cloud, Mobile, Web &amp; DevOps at Platinum Hall, Lemaco Gardens, Port Harcourt.
           </p>
 
           <div className="flex items-center gap-3">

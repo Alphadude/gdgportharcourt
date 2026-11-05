@@ -17,11 +17,14 @@ export const metadata: Metadata = {
     "Google Developer Group Port Harcourt color palette",
     "Google Sans typography",
   ],
+  alternates: {
+    canonical: "/brand-guidelines",
+  },
   openGraph: {
     title: "Brand Guidelines | GDG Port Harcourt",
     description:
       "Explore official brand guidelines, download SVG logos, inspect typography and color palettes for GDG Port Harcourt.",
-    url: "https://devfestportharcourt.com/brand-guidelines",
+    url: "https://gdgportharcourt.com.ng/brand-guidelines",
     siteName: "GDG Port Harcourt",
   },
 };

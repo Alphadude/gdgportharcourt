@@ -10,6 +10,9 @@ export const metadata: Metadata = {
   title: "DP Generator",
   description:
     "Generate your official DevFest Port Harcourt 2026 Display Picture (DP) and share your custom frame with the community!",
+  alternates: {
+    canonical: "/dp-generator",
+  },
 };
 
 export default function DpGeneratorPage() {

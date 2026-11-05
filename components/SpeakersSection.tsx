@@ -5,6 +5,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { Speaker } from "@/lib/types";
 import SpeakerCard from "@/components/SpeakerCard";
 
@@ -25,7 +26,7 @@ export default function SpeakersSection({ speakers }: SpeakersSectionProps) {
   const [activeDay, setActiveDay] = useState<string | number>("all");
 
   const filteredSpeakers =
-    activeDay === "all"
+    activeDay === "all" || activeDay === 4
       ? speakers
       : speakers.filter((s) => s.day === activeDay);
 
@@ -57,6 +58,75 @@ export default function SpeakersSection({ speakers }: SpeakersSectionProps) {
             </svg>
             APPLY AS A SPEAKER
           </a>
+        </div>
+      </div>
+
+      {/* ── Featured Keynote Speaker Spotlight (Paul Jeremiah) ──────── */}
+      <div className="mb-14 sm:mb-20 rounded-3xl bg-gradient-to-br from-white/[0.08] via-white/[0.04] to-white/[0.02] border border-white/15 p-6 sm:p-10 lg:p-12 relative overflow-hidden backdrop-blur-md shadow-2xl">
+        {/* Glow ambient background effects */}
+        <div className="absolute top-0 right-0 w-80 h-80 bg-google-blue/20 rounded-full blur-[100px] pointer-events-none" />
+        <div className="absolute bottom-0 left-0 w-80 h-80 bg-[#F5B82A]/15 rounded-full blur-[100px] pointer-events-none" />
+
+        <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+          {/* Left Column: Portrait Frame */}
+          <div className="lg:col-span-4 flex flex-col items-center">
+            <div className="relative w-full max-w-[320px] aspect-[4/5] rounded-2xl overflow-hidden bg-[#FDF4CE] border-2 border-white/20 shadow-xl group">
+              <Image
+                src="/speakers/paul-jeremiah.png"
+                alt="Paul Jeremiah - Indie Hacker & Keynote Speaker"
+                fill
+                priority
+                className="object-cover object-top group-hover:scale-105 transition-transform duration-500"
+              />
+              <div className="absolute top-3 left-3 px-3 py-1 rounded-full bg-black/80 backdrop-blur-sm text-yellow-400 font-akira text-[10px] tracking-wider uppercase border border-yellow-400/30">
+                Keynote Speaker
+              </div>
+            </div>
+          </div>
+
+          {/* Right Column: Bio & Credentials */}
+          <div className="lg:col-span-8 flex flex-col justify-center space-y-4 sm:space-y-5">
+            <div className="flex flex-wrap items-center gap-2.5">
+              <span className="px-3.5 py-1 rounded-full bg-google-blue/20 border border-google-blue/40 text-blue-300 font-sans text-xs font-bold uppercase tracking-wider">
+                Featured Speaker
+              </span>
+              <span className="px-3.5 py-1 rounded-full bg-emerald-500/20 border border-emerald-500/40 text-emerald-300 font-sans text-xs font-bold uppercase tracking-wider">
+                Mobile &amp; AI Workflows
+              </span>
+            </div>
+
+            <div>
+              <h2 className="font-akira font-black text-2xl sm:text-4xl text-white tracking-tight uppercase leading-tight">
+                Paul Jeremiah
+              </h2>
+              <p className="text-sm sm:text-base text-yellow-400 font-semibold mt-1.5">
+                Indie Hacker <span className="text-gray-400 font-normal">—</span> Piya, FastResume, Prioritize App, Cookpaddy, The Bar - Dating checklist
+              </p>
+            </div>
+
+            <div className="space-y-3 text-gray-300 text-sm sm:text-base leading-relaxed font-normal">
+              <p>
+                Paul Jeremiah is a software engineer, product builder, and founding engineer who specializes in building and launching production-ready mobile applications, backend systems, AI workflows, and cloud infrastructure. He has worked as a Lead Engineer at Medalla and Staffi, developing digital products for healthcare recruitment in Sweden, and has built several independent applications, including Okepoint, Prioritize, Cook Paddy, Fast Resume by Elio, and Piya.
+              </p>
+              <p>
+                Paul’s technical experience spans Flutter, Dart, Swift, Kotlin, React, Node.js, TypeScript, Firebase, Google Cloud Platform, AWS, AI agents, and automated development workflows. He is especially interested in how solo developers can use AI to research, plan, design, build, test, launch, and monetize useful software products.
+              </p>
+              <p>
+                He has previously spoken at FlutterConf and Flutterbytes on debugging, testing, application stability, and user insights. Through his talks, Paul shares practical lessons from building real products, making technical decisions, and taking applications from an initial idea to users.
+              </p>
+            </div>
+
+            <div className="flex flex-wrap items-center gap-2 pt-2">
+              {["Flutter", "AI Agents", "Cloud Infrastructure", "Indie Hacking", "Mobile Architecture"].map((skill) => (
+                <span
+                  key={skill}
+                  className="px-3 py-1 rounded-lg bg-white/10 text-white/90 text-xs font-medium border border-white/10"
+                >
+                  #{skill}
+                </span>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
 

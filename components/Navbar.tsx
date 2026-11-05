@@ -13,6 +13,7 @@ const NAV_LINKS = [
   { label: "SCHEDULE", href: "/schedule" },
   { label: "SPEAKERS", href: "/speakers" },
   { label: "DP GENERATOR", href: "/dp-generator" },
+  { label: "SWAG", href: "/swag" },
   { label: "FAQS", href: "/faqs" },
   { label: "TEAM", href: "/team" },
   { label: "BRAND", href: "/brand-guidelines" },
@@ -43,6 +44,7 @@ export default function Navbar() {
               alt="GDG Logo"
               width={24}
               height={24}
+              priority
               className="w-6 h-6 object-contain"
             />
             <span className="font-black tracking-tight text-black text-sm">

@@ -105,11 +105,12 @@ export default function SponsorGrid({ sponsors }: SponsorGridProps) {
                     className="flex items-center justify-center p-6 rounded-2xl bg-white/5 hover:bg-white/10 border border-white/10 hover:border-white/25 transition-all duration-300 hover:shadow-lg group"
                   >
                     <div className={`relative ${config.logoSize} w-full flex items-center justify-center`}>
-                      <img
+                      <Image
                         src={sponsor.logoUrl}
                         alt={sponsor.name}
-                        className="max-h-full max-w-full object-contain filter brightness-75 group-hover:brightness-100 transition-all duration-300"
-                        loading="lazy"
+                        fill
+                        unoptimized
+                        className="object-contain filter brightness-75 group-hover:brightness-100 transition-all duration-300"
                       />
                     </div>
                   </a>

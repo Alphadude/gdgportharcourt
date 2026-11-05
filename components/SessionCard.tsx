@@ -3,6 +3,7 @@
 // Schedule session card matching official DevFest Lagos/Port Harcourt design
 // ─────────────────────────────────────────────────────────────────────────────
 
+import Image from "next/image";
 import { Session, Speaker } from "@/lib/types";
 
 interface SessionCardProps {
@@ -64,9 +65,12 @@ export default function SessionCard({ session, speakers }: SessionCardProps) {
         <div className="flex flex-wrap items-center gap-4 mt-4 pt-3 border-t border-gray-100">
           {speakers.map((sp) => (
             <div key={sp.id} className="flex items-center gap-2">
-              <img
+              <Image
                 src={sp.imageUrl}
                 alt={sp.name}
+                width={28}
+                height={28}
+                unoptimized
                 className="w-7 h-7 rounded-full object-cover border border-gray-200 shrink-0"
               />
               <span className="text-sm font-bold text-gray-900">{sp.name}</span>

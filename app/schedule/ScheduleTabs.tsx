@@ -79,13 +79,13 @@ export default function ScheduleTabs({
       >
         {/* Banner Subheader inside Card */}
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-8 sm:mb-12">
-          {/* Left Title */}
+          {/* Left Title - Page Primary Heading */}
           <div>
-            <h2
+            <h1
               className={`font-akira font-black text-3xl sm:text-5xl lg:text-6xl ${activeBgTheme.titleColor} tracking-tight uppercase leading-none`}
             >
               {activeTitle}
-            </h2>
+            </h1>
           </div>
 
           {/* Right Description & Registration Pill */}

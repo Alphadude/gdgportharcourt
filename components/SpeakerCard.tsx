@@ -5,6 +5,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { Speaker } from "@/lib/types";
 
 interface SpeakerCardProps {
@@ -28,6 +29,20 @@ export default function SpeakerCard({ speaker, colorIndex = 0 }: SpeakerCardProp
   const [flipped, setFlipped] = useState(false);
   const bgColor = PASTEL_BG_COLORS[colorIndex % PASTEL_BG_COLORS.length];
 
+  const twitterUrl = speaker.twitter
+    ? speaker.twitter.startsWith("http")
+      ? speaker.twitter
+      : `https://x.com/${speaker.twitter.replace(/^@/, "")}`
+    : null;
+
+  const linkedinUrl = speaker.linkedin
+    ? speaker.linkedin.startsWith("http")
+      ? speaker.linkedin
+      : speaker.linkedin.startsWith("www.")
+      ? `https://${speaker.linkedin}`
+      : `https://linkedin.com/in/${speaker.linkedin}`
+    : null;
+
   return (
     <article
       onClick={() => setFlipped(!flipped)}
@@ -38,11 +53,12 @@ export default function SpeakerCard({ speaker, colorIndex = 0 }: SpeakerCardProp
         <div className="flex flex-col h-full justify-between">
           {/* Top Pastel Photo Container */}
           <div className={`relative aspect-[4/4.5] w-full overflow-hidden ${bgColor} p-3 flex items-end justify-center`}>
-            <img
+            <Image
               src={speaker.imageUrl}
               alt={speaker.name}
-              className="w-full h-full object-cover object-top rounded-t-xl group-hover:scale-105 transition-transform duration-500"
-              loading="lazy"
+              fill
+              unoptimized
+              className="object-cover object-top rounded-t-xl group-hover:scale-105 transition-transform duration-500"
             />
           </div>
 
@@ -67,22 +83,29 @@ export default function SpeakerCard({ speaker, colorIndex = 0 }: SpeakerCardProp
               {speaker.name}
             </h3>
             <p className="text-xs font-sans text-gray-600 font-semibold mb-3">
-              {speaker.title} {speaker.company ? `at ${speaker.company}` : ""}
+              {speaker.title} {speaker.company ? `— ${speaker.company}` : ""}
             </p>
 
-            <p className="text-xs font-sans text-gray-700 leading-relaxed font-medium line-clamp-6">
-              {speaker.bio ||
-                `${speaker.name} is a speaker sharing insights on ${
-                  speaker.tags?.join(", ") || "technology"
-                } at DevFest Port Harcourt 2026.`}
-            </p>
+            <div className="text-xs font-sans text-gray-700 leading-relaxed font-medium overflow-y-auto max-h-[170px] pr-1 space-y-2 text-left">
+              {speaker.bio ? (
+                speaker.bio.split("\n\n").map((para, i) => (
+                  <p key={i}>{para}</p>
+                ))
+              ) : (
+                <p>
+                  {`${speaker.name} is a speaker sharing insights on ${
+                    speaker.tags?.join(", ") || "technology"
+                  } at DevFest Port Harcourt 2026.`}
+                </p>
+              )}
+            </div>
           </div>
 
           {/* Social Icons at Bottom */}
           <div className="flex items-center gap-2 pt-4 border-t border-gray-100">
-            {speaker.twitter && (
+            {twitterUrl && (
               <a
-                href={`https://twitter.com/${speaker.twitter}`}
+                href={twitterUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={(e) => e.stopPropagation()}
@@ -94,9 +117,9 @@ export default function SpeakerCard({ speaker, colorIndex = 0 }: SpeakerCardProp
                 </svg>
               </a>
             )}
-            {speaker.linkedin && (
+            {linkedinUrl && (
               <a
-                href={`https://linkedin.com/in/${speaker.linkedin}`}
+                href={linkedinUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={(e) => e.stopPropagation()}

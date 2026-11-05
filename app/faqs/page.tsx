@@ -4,18 +4,40 @@
 // ─────────────────────────────────────────────────────────────────────────────
 
 import type { Metadata } from "next";
+import Image from "next/image";
 import FaqAccordion from "@/components/FaqAccordion";
 import { faqs } from "@/lib/data/faqs";
 
 export const metadata: Metadata = {
-  title: "FAQs",
+  title: "Frequently Asked Questions",
   description:
     "Frequently asked questions about DevFest Port Harcourt 2026 — free registration, venue, schedule, sponsorship, and more.",
+  alternates: {
+    canonical: "/faqs",
+  },
 };
 
 export default function FaqsPage() {
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqs.map((faq) => ({
+      "@type": "Question",
+      "name": faq.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": faq.answer,
+      },
+    })),
+  };
+
   return (
     <div className="bg-[#FAF7EE] text-black min-h-screen pt-28 pb-24 px-4 sm:px-6 lg:px-8 w-full font-sans">
+      {/* Schema.org FAQPage Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
       <div className="max-w-5xl mx-auto">
         {/* ── Page Header Section ────────────────────────────────────────── */}
         <div className="text-center flex flex-col items-center mb-8">
@@ -37,9 +59,11 @@ export default function FaqsPage() {
 
               {/* Center Community Avatar Stamp */}
               <div className="absolute inset-0 m-auto w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-white border-2 border-black overflow-hidden shadow-inner flex items-center justify-center">
-                <img
+                <Image
                   src="/gdg-logo.png"
                   alt="GDG Community"
+                  width={80}
+                  height={80}
                   className="w-full h-full object-contain p-2"
                 />
               </div>

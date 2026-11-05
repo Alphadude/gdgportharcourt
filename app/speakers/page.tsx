@@ -11,6 +11,9 @@ export const metadata: Metadata = {
   title: "Speakers",
   description:
     "Meet the expert speakers presenting at DevFest Port Harcourt 2026 — covering AI, Cloud, Mobile, Web, DevOps and more.",
+  alternates: {
+    canonical: "/speakers",
+  },
 };
 
 export default function SpeakersPage() {

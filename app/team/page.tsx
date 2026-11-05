@@ -4,6 +4,7 @@
 // ─────────────────────────────────────────────────────────────────────────────
 
 import type { Metadata } from "next";
+import Image from "next/image";
 import TeamSection from "@/components/TeamSection";
 import { teamMembers } from "@/lib/data/team";
 
@@ -11,6 +12,9 @@ export const metadata: Metadata = {
   title: "Team",
   description:
     "Meet the passionate GDG Port Harcourt volunteers who make DevFest Port Harcourt 2026 possible.",
+  alternates: {
+    canonical: "/team",
+  },
 };
 
 export default function TeamPage() {
@@ -59,10 +63,11 @@ export default function TeamPage() {
             <div className="relative rotate-[-6deg] hover:rotate-0 hover:z-20 transition-all duration-300 transform shrink-0">
               <div className="bg-white p-3 sm:p-4 rounded-sm shadow-2xl border border-black/10 w-44 sm:w-72 md:w-80">
                 <div className="aspect-[4/3] relative rounded-sm overflow-hidden bg-gray-200">
-                  <img
+                  <Image
                     src="/team.jpg"
                     alt="DevFest Team Moment"
-                    className="w-full h-full object-cover"
+                    fill
+                    className="object-cover"
                   />
                 </div>
               </div>
@@ -72,10 +77,11 @@ export default function TeamPage() {
             <div className="relative rotate-[1deg] hover:rotate-0 hover:z-20 transition-all duration-300 transform shrink-0 z-10 -mx-4 sm:mx-0">
               <div className="bg-white p-3 sm:p-4 rounded-sm shadow-2xl border border-black/10 w-48 sm:w-80 md:w-96">
                 <div className="aspect-[4/3] relative rounded-sm overflow-hidden bg-gray-200">
-                  <img
+                  <Image
                     src="/team2.jpg"
                     alt="DevFest Organizers"
-                    className="w-full h-full object-cover"
+                    fill
+                    className="object-cover"
                   />
                 </div>
               </div>
@@ -85,10 +91,11 @@ export default function TeamPage() {
             <div className="relative rotate-[6deg] hover:rotate-0 hover:z-20 transition-all duration-300 transform shrink-0">
               <div className="bg-white p-3 sm:p-4 rounded-sm shadow-2xl border border-black/10 w-44 sm:w-72 md:w-80">
                 <div className="aspect-[4/3] relative rounded-sm overflow-hidden bg-gray-200">
-                  <img
+                  <Image
                     src="/team1.jpg"
                     alt="DevFest Community"
-                    className="w-full h-full object-cover"
+                    fill
+                    className="object-cover"
                   />
                 </div>
               </div>

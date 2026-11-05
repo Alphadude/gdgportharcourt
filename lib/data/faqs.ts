@@ -24,7 +24,7 @@ export const faqs: FaqItem[] = [
     id: "when-where",
     question: "When & where will DevFest Port Harcourt 2026 take place?",
     answer:
-      "DevFest Port Harcourt 2026 will take place on November 28th, 2026. The venue is TBD (To Be Determined) and will be announced on our official social media channels.",
+      "DevFest Port Harcourt 2026 will take place on November 28th, 2026 at Platinum Hall, Lemaco Gardens, Ada-George Road, Mgbuoba, Port Harcourt 500272, Rivers State.",
     category: "general",
   },
   {

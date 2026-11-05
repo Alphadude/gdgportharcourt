@@ -1,46 +1,11 @@
 // ─────────────────────────────────────────────────────────────────────────────
 // components/SwagSection.tsx
-// Swag / Tickets section matching 2025.devfestlagos.com design pattern
-// Positioned below the sponsor logo carousel on the homepage.
+// Swag / Merchandise section on Homepage
+// Links directly to the dedicated DevFest Swag Store at /swag
 // ─────────────────────────────────────────────────────────────────────────────
-"use client";
-
-import { useState, useEffect, useCallback } from "react";
+import Link from "next/link";
 
 export default function SwagSection() {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const [selectedPackage, setSelectedPackage] = useState<string>("STANDARD SWAG");
-
-  const openModal = (packageName: string) => {
-    setSelectedPackage(packageName);
-    setIsModalOpen(true);
-  };
-
-  const closeModal = useCallback(() => {
-    setIsModalOpen(false);
-  }, []);
-
-  // Handle ESC key press and scroll lock
-  useEffect(() => {
-    const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.key === "Escape" && isModalOpen) {
-        closeModal();
-      }
-    };
-
-    if (isModalOpen) {
-      document.body.style.overflow = "hidden";
-      window.addEventListener("keydown", handleKeyDown);
-    } else {
-      document.body.style.overflow = "unset";
-    }
-
-    return () => {
-      document.body.style.overflow = "unset";
-      window.removeEventListener("keydown", handleKeyDown);
-    };
-  }, [isModalOpen, closeModal]);
-
   return (
     <section className="bg-[#18181B] text-white py-20 sm:py-28 px-4 sm:px-6 lg:px-8 w-full border-t border-white/10 relative">
       <div className="max-w-6xl mx-auto">
@@ -91,10 +56,16 @@ export default function SwagSection() {
                 </div>
               </div>
 
-              {/* Package Header (Price Removed) */}
-              <h4 className="font-akira font-black text-lg sm:text-xl text-black uppercase tracking-tight mb-2">
-                STANDARD SWAG
-              </h4>
+              {/* Package Header */}
+              <div className="flex items-center justify-between gap-2 mb-2">
+                <h4 className="font-akira font-black text-lg sm:text-xl text-black uppercase tracking-tight">
+                  STANDARD SWAG
+                </h4>
+                <span className="font-akira font-black text-sm text-google-blue bg-white/70 px-3 py-1 rounded-full border border-black/10">
+                  ₦12,000
+                </span>
+              </div>
+
               <p className="text-gray-800 text-xs sm:text-sm font-medium leading-relaxed mb-6">
                 Open to everyone — get the essential DevFest Port Harcourt 2026 merchandise pack.
               </p>
@@ -120,19 +91,23 @@ export default function SwagSection() {
               </ul>
             </div>
 
-            {/* CTA Button */}
-            <button
-              type="button"
-              onClick={() => openModal("STANDARD SWAG")}
+            {/* CTA Button -> links to /swag?package=standard */}
+            <Link
+              href="/swag?package=standard"
               className="w-full py-4 rounded-full bg-[#F5B82A] text-black font-akira font-black text-xs sm:text-sm uppercase tracking-wider border-2 border-black hover:bg-yellow-400 transition-all hover:scale-[1.02] shadow-md text-center block cursor-pointer active:scale-95"
             >
-              BUY SWAG
-            </button>
+              BUY SWAG →
+            </Link>
           </div>
 
           {/* ── Card 2: PRO SWAG ───────────────────────────────────────── */}
-          <div className="bg-[#FDF4CE] rounded-3xl p-6 sm:p-8 border-4 border-[#F5B82A] text-black shadow-2xl flex flex-col justify-between transition-transform duration-300 hover:scale-[1.01]">
+          <div className="bg-[#FDF4CE] rounded-3xl p-6 sm:p-8 border-4 border-[#F5B82A] text-black shadow-2xl flex flex-col justify-between transition-transform duration-300 hover:scale-[1.01] relative">
             <div>
+              {/* Badge */}
+              <div className="absolute -top-3.5 right-6 bg-black text-yellow-400 font-akira text-[10px] font-black uppercase px-3 py-1 rounded-full border-2 border-[#F5B82A] shadow-md tracking-wider">
+                MOST POPULAR
+              </div>
+
               {/* Ticket Graphic at top */}
               <div className="bg-black text-white rounded-2xl p-6 border-2 border-black relative mb-6 shadow-md flex items-center justify-between">
                 {/* Barcode on left */}
@@ -155,10 +130,16 @@ export default function SwagSection() {
                 </div>
               </div>
 
-              {/* Package Header (Price Removed) */}
-              <h4 className="font-akira font-black text-lg sm:text-xl text-black uppercase tracking-tight mb-2">
-                PRO SWAG
-              </h4>
+              {/* Package Header */}
+              <div className="flex items-center justify-between gap-2 mb-2">
+                <h4 className="font-akira font-black text-lg sm:text-xl text-black uppercase tracking-tight">
+                  PRO SWAG
+                </h4>
+                <span className="font-akira font-black text-sm text-black bg-white/80 px-3 py-1 rounded-full border border-black/10">
+                  ₦28,000
+                </span>
+              </div>
+
               <p className="text-gray-800 text-xs sm:text-sm font-medium leading-relaxed mb-6">
                 For techies who want the complete premium merchandise collection &amp; exclusive items.
               </p>
@@ -184,95 +165,27 @@ export default function SwagSection() {
               </ul>
             </div>
 
-            {/* CTA Button */}
-            <button
-              type="button"
-              onClick={() => openModal("PRO SWAG")}
+            {/* CTA Button -> links to /swag?package=pro */}
+            <Link
+              href="/swag?package=pro"
               className="w-full py-4 rounded-full bg-[#F5B82A] text-black font-akira font-black text-xs sm:text-sm uppercase tracking-wider border-2 border-black hover:bg-yellow-400 transition-all hover:scale-[1.02] shadow-md text-center block cursor-pointer active:scale-95"
             >
-              BUY PRO SWAG
-            </button>
+              BUY PRO SWAG →
+            </Link>
           </div>
+        </div>
+
+        {/* ── View All Merchandise Storefront Link ──────────────────────── */}
+        <div className="mt-12 text-center">
+          <Link
+            href="/swag"
+            className="inline-flex items-center gap-3 px-8 py-3.5 rounded-full bg-white/10 hover:bg-white/20 text-white font-akira text-xs font-bold uppercase tracking-wider border border-white/20 transition-all hover:scale-105"
+          >
+            <span>EXPLORE ALL APPAREL &amp; ACCESSORIES</span>
+            <span className="text-yellow-400">→</span>
+          </Link>
         </div>
       </div>
-
-      {/* ── Coming Soon Modal ────────────────────────────────────────── */}
-      {isModalOpen && (
-        <div
-          className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-black/80 backdrop-blur-md animate-fade-in"
-          onClick={closeModal}
-          role="dialog"
-          aria-modal="true"
-          aria-labelledby="swag-modal-title"
-        >
-          <div
-            className="relative w-full max-w-lg bg-[#1F1F23] border-2 border-white/20 rounded-3xl p-6 sm:p-8 text-white shadow-2xl transform transition-all animate-scale-up"
-            onClick={(e) => e.stopPropagation()}
-          >
-            {/* Close Button */}
-            <button
-              onClick={closeModal}
-              className="absolute top-5 right-5 w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 text-gray-300 hover:text-white flex items-center justify-center transition-all cursor-pointer border border-white/10"
-              aria-label="Close modal"
-            >
-              <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
-                <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
-              </svg>
-            </button>
-
-            {/* Modal Icon & Tag */}
-            <div className="flex flex-col items-center text-center">
-              <div className="w-16 h-16 rounded-2xl bg-gradient-to-tr from-yellow-500/20 via-orange-500/20 to-amber-500/30 border border-yellow-400/30 flex items-center justify-center mb-5 shadow-inner">
-                <span className="text-3xl">🛍️</span>
-              </div>
-
-              <span className="inline-block px-3.5 py-1 rounded-full bg-[#F5B82A]/10 border border-[#F5B82A]/30 text-[#F5B82A] text-[11px] font-akira font-black uppercase tracking-wider mb-3">
-                {selectedPackage}
-              </span>
-
-              <h3
-                id="swag-modal-title"
-                className="font-akira font-black text-2xl sm:text-3xl text-white tracking-tight uppercase leading-snug mb-3"
-              >
-                SWAG STORE
-                <br />
-                COMING SOON
-              </h3>
-
-              <p className="text-gray-300 text-sm sm:text-base leading-relaxed mb-6 font-medium">
-                Official DevFest Port Harcourt 2026 merchandise and swag packs will be available for purchase soon! 
-                Pre-orders and distribution instructions will be announced to all registered participants.
-              </p>
-
-              <div className="w-full bg-white/5 rounded-2xl p-4 border border-white/10 mb-6 text-left">
-                <p className="text-xs text-gray-400 font-medium flex items-center gap-2">
-                  <span className="text-emerald-400 text-base">✓</span>
-                  <span><strong>Admission is 100% Free:</strong> You can register today and add swag later.</span>
-                </p>
-              </div>
-
-              {/* Action Buttons */}
-              <div className="w-full flex flex-col sm:flex-row items-center gap-3">
-                <a
-                  href="https://gdg.community.dev/events/details/google-gdg-port-harcourt-presents-devfest-port-harcourt-2026/cohost-gdg-port-harcourt/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-full sm:flex-1 py-3.5 px-6 rounded-full bg-[#F5B82A] text-black font-akira font-black text-xs sm:text-sm uppercase tracking-wider border-2 border-black hover:bg-yellow-400 transition-all hover:scale-105 shadow-md text-center"
-                >
-                  REGISTER NOW
-                </a>
-                <button
-                  type="button"
-                  onClick={closeModal}
-                  className="w-full sm:w-auto py-3.5 px-6 rounded-full bg-white/10 hover:bg-white/20 text-white font-akira font-black text-xs sm:text-sm uppercase tracking-wider border border-white/20 transition-all"
-                >
-                  GOT IT
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
     </section>
   );
 }

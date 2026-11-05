@@ -67,45 +67,55 @@ export default function CommunityBanner() {
 
               {/* Orbit Node 1 (Top) */}
               <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-14 h-14 sm:w-16 sm:h-16 rounded-full border-2 border-[#F5B82A] overflow-hidden bg-black shadow-xl">
-                <img
+                <Image
                   src="https://storage.googleapis.com/devfestlagos2025/Ruby/OG%20IMAGE.webp"
                   alt="Community Node"
+                  width={64}
+                  height={64}
                   className="w-full h-full object-cover"
                 />
               </div>
 
               {/* Orbit Node 2 (Right) */}
               <div className="absolute top-1/3 right-0 translate-x-1/2 w-14 h-14 sm:w-16 sm:h-16 rounded-full border-2 border-[#F5B82A] overflow-hidden bg-black shadow-xl">
-                <img
+                <Image
                   src="https://storage.googleapis.com/devfestlagos2025/Ruby/Approved%20Speaker%20photos%20/Olumide%20Balogun.png"
                   alt="Community Node"
+                  width={64}
+                  height={64}
                   className="w-full h-full object-cover"
                 />
               </div>
 
               {/* Orbit Node 3 (Bottom Right) */}
               <div className="absolute bottom-4 right-8 translate-x-1/4 w-14 h-14 sm:w-16 sm:h-16 rounded-full border-2 border-[#F5B82A] overflow-hidden bg-black shadow-xl">
-                <img
+                <Image
                   src="https://storage.googleapis.com/devfestlagos2025/Ruby/Approved%20Speaker%20photos%20/Odun%20Eweniyi.png"
                   alt="Community Node"
+                  width={64}
+                  height={64}
                   className="w-full h-full object-cover"
                 />
               </div>
 
               {/* Orbit Node 4 (Bottom Left) */}
               <div className="absolute bottom-6 left-12 -translate-x-1/4 w-14 h-14 sm:w-16 sm:h-16 rounded-full border-2 border-[#F5B82A] overflow-hidden bg-black shadow-xl">
-                <img
+                <Image
                   src="https://storage.googleapis.com/devfestlagos2025/Ruby/Approved%20Speaker%20photos%20/Thomas%20Steiner.png"
                   alt="Community Node"
+                  width={64}
+                  height={64}
                   className="w-full h-full object-cover"
                 />
               </div>
 
               {/* Orbit Node 5 (Left) */}
               <div className="absolute top-1/2 left-0 -translate-x-1/2 -translate-y-1/2 w-14 h-14 sm:w-16 sm:h-16 rounded-full border-2 border-[#F5B82A] overflow-hidden bg-black shadow-xl">
-                <img
+                <Image
                   src="https://storage.googleapis.com/devfestlagos2025/Ruby/Approved%20Speaker%20photos%20/Oluwadunni%20Fanibe.png"
                   alt="Community Node"
+                  width={64}
+                  height={64}
                   className="w-full h-full object-cover"
                 />
               </div>

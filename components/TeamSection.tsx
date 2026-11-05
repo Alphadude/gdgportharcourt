@@ -5,6 +5,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { TeamMember, TeamDepartment } from "@/lib/types";
 
 interface TeamSectionProps {
@@ -105,11 +106,13 @@ export default function TeamSection({ members }: TeamSectionProps) {
               >
                 {/* Left: Avatar & Name */}
                 <div className="flex items-center gap-5 shrink-0 max-w-sm">
-                  <div className="w-20 h-24 sm:w-24 sm:h-28 rounded-2xl overflow-hidden bg-gray-800 border border-white/10 shrink-0">
-                    <img
+                  <div className="w-20 h-24 sm:w-24 sm:h-28 rounded-2xl overflow-hidden bg-gray-800 border border-white/10 shrink-0 relative">
+                    <Image
                       src={member.imageUrl}
                       alt={member.name}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      fill
+                      unoptimized
+                      className="object-cover group-hover:scale-105 transition-transform duration-500"
                     />
                   </div>
                   <div>
@@ -204,11 +207,13 @@ export default function TeamSection({ members }: TeamSectionProps) {
                 className="bg-white/5 rounded-2xl p-6 border border-white/10 hover:border-white/30 transition-all flex flex-col justify-between"
               >
                 <div>
-                  <div className="w-20 h-24 rounded-xl overflow-hidden bg-gray-800 mb-4">
-                    <img
+                  <div className="w-20 h-24 rounded-xl overflow-hidden bg-gray-800 mb-4 relative">
+                    <Image
                       src={member.imageUrl}
                       alt={member.name}
-                      className="w-full h-full object-cover"
+                      fill
+                      unoptimized
+                      className="object-cover"
                     />
                   </div>
                   <h3 className="font-akira font-black text-xl text-white uppercase leading-tight">

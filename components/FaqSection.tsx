@@ -7,6 +7,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { faqs } from "@/lib/data/faqs";
 
 export default function FaqSection() {
@@ -40,10 +41,12 @@ export default function FaqSection() {
 
             {/* Center Community Avatar Stamp */}
             <div className="absolute inset-0 m-auto w-14 h-14 sm:w-20 sm:h-20 rounded-full bg-white border-2 border-black overflow-hidden shadow-inner flex items-center justify-center">
-              <img
-                src="/public/gdg-logo.png"
+              <Image
+                src="/gdg-logo.png"
                 alt="GDG Community"
-                className="w-full h-full object-cover"
+                width={80}
+                height={80}
+                className="w-full h-full object-contain p-2"
               />
             </div>
           </div>

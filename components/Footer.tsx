@@ -136,6 +136,12 @@ export default function Footer() {
               >
                 DP Generator
               </Link>
+              <Link
+                href="/swag"
+                className="block text-gray-900 hover:text-google-blue transition-colors font-bold text-google-blue"
+              >
+                Swag Store
+              </Link>
 
               <div className="pt-6 space-y-4">
                 <Link href="/faqs" className="block text-gray-900 hover:text-google-blue transition-colors">

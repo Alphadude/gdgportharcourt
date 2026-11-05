@@ -4,6 +4,7 @@
 // ─────────────────────────────────────────────────────────────────────────────
 "use client";
 
+import Image from "next/image";
 import { Sponsor } from "@/lib/types";
 
 interface SponsorTickerProps {
@@ -39,11 +40,13 @@ export default function SponsorTicker({ sponsors }: SponsorTickerProps) {
               aria-label={sponsor.name}
               className="inline-flex items-center shrink-0 opacity-80 hover:opacity-100 hover:scale-105 transition-all duration-300 px-2"
             >
-              <img
+              <Image
                 src={sponsor.logoUrl}
                 alt={sponsor.name}
+                width={140}
+                height={50}
+                unoptimized
                 className="h-9 sm:h-14 w-auto max-w-[160px] sm:max-w-[220px] object-contain"
-                loading="lazy"
               />
             </a>
           ))}

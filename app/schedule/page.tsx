@@ -13,6 +13,9 @@ export const metadata: Metadata = {
   title: "Schedule",
   description:
     "Browse the DevFest Port Harcourt 2026 schedule — keynotes, talks, workshops, and technical sessions across 20+ tracks.",
+  alternates: {
+    canonical: "/schedule",
+  },
 };
 
 export default function SchedulePage() {
