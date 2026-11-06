@@ -187,6 +187,18 @@ export const sessions: Session[] = [
     type: "talk",
   },
   {
+    id: "d4-securing-ai-model-armor",
+    title: "Securing AI Agents with Model Armor",
+    description: "Explore security considerations for building and deploying production AI agents. Learn how Google Cloud's Model Armor protects AI apps with security controls, prompt injection defense, sensitive data protection, and secure agent interactions.",
+    startTime: "12:00 PM",
+    endTime: "12:45 PM",
+    day: 4,
+    track: "AI / ML",
+    room: "Grand Auditorium",
+    speakerIds: ["shadrack-inusah"],
+    type: "talk",
+  },
+  {
     id: "d4-antigravity-microservices",
     title: "Deploying Microservices on Google Cloud with Antigravity",
     description: "Learn how agent-first development with Google Antigravity automates Dockerfile generation, service configuration, and deployment to Cloud Run, Artifact Registry, and Cloud Build, while applying strict IAM and security guardrails.",
@@ -207,7 +219,7 @@ export const sessions: Session[] = [
     day: 4,
     track: "Startup",
     room: "Grand Auditorium",
-    speakerIds: ["paul-jeremiah", "cedar-daniel", "samuel-amakiri", "chiehiura-nze", "saheed-adewumi", "austine-amah", "joy-akhanolu", "caleb-duff"],
+    speakerIds: ["paul-jeremiah", "cedar-daniel", "samuel-amakiri", "chiehiura-nze", "saheed-adewumi", "austine-amah", "joy-akhanolu", "caleb-duff", "shadrack-inusah"],
     type: "panel",
   },
 

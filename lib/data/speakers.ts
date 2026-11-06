@@ -127,4 +127,16 @@ export const speakers: Speaker[] = [
     tags: ["Cloud", "DevOps", "AI / ML"],
     day: 4,
   },
+  {
+    id: "shadrack-inusah",
+    name: "Shadrack Inusah",
+    title: "Google Developer Expert, Cloud AI",
+    company: "GDG Accra · Cloud AI GDE",
+    imageUrl: "https://i.ibb.co/0kjNBxx/Shadrack-Inusah-Headshot.jpg",
+    bio: "Shadrack is a Software and Automation Engineer, Community Builder, and Google Developer Expert in Cloud AI. He builds AI-powered, cloud-based solutions and developer tools that help organisations automate workflows, ship faster, and scale efficiently. He also leads GDG Accra, where he supports developer growth through community, mentorship, and technical education.",
+    twitter: "https://x.com/kojo_shaddy",
+    linkedin: "https://www.linkedin.com/in/shadrack-inusah/",
+    tags: ["AI / ML", "Cloud", "Security"],
+    day: 4,
+  },
 ];
