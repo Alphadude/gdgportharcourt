@@ -115,4 +115,16 @@ export const speakers: Speaker[] = [
     tags: ["Product Management", "Community", "Leadership"],
     day: 4,
   },
+  {
+    id: "caleb-duff",
+    name: "Caleb Ini. D. Duff",
+    title: "Google Cloud Architect & Software Engineer",
+    company: "GDG Cloud Port Harcourt · ICT Consultant",
+    imageUrl: "https://i.ibb.co/4gNn2GV7/Caleb-Ini-D-Duff.png",
+    bio: "Caleb Ini D. Duff is a Software Engineer, Google Cloud Architect, and ICT Consultant who designs and builds modern digital software solutions. With a focus on resilient cloud systems, serverless infrastructure, and practical AI implementations, he helps teams translate complex engineering challenges into secure, scalable products.\n\nAs an organizer for Google Developer Group (GDG) Cloud Port Harcourt, Caleb actively fosters developer growth and leads community enablement programs across the tech ecosystem.\n\nCaleb’s writing and speaking explore the intersection of robust software architecture, cloud platforms and practical artificial intelligence, focusing on managed LLM inference, sandboxed code execution in production, production-grade agentic workflows, horizontal versus vertical agent architectures, bridging the gap between cutting-edge technology and real-world application delivery.\n\nDedicated to democratizing access to modern engineering practices, Caleb frequently mentors engineers, judges hackathons, and shares accessible, in-depth architectural guides through his technical publications and videos.",
+    twitter: "https://www.x.com/duffygoogle",
+    linkedin: "https://linkedin.com/in/duffcaleb/",
+    tags: ["Cloud", "DevOps", "AI / ML"],
+    day: 4,
+  },
 ];
