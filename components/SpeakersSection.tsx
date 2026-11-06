@@ -14,12 +14,7 @@ interface SpeakersSectionProps {
 }
 
 const DAY_PILLS = [
-  { label: "ALL", value: "all" },
-  { label: "AUG 21", value: 1 },
-  { label: "SEP 25", value: 2 },
-  { label: "OCT 23", value: 3 },
   { label: "NOV 28", value: 4 },
-  { label: "DEC 11", value: 5 },
 ];
 
 const KEYNOTE_DATA = {
@@ -60,14 +55,11 @@ const KEYNOTE_DATA = {
 };
 
 export default function SpeakersSection({ speakers }: SpeakersSectionProps) {
-  const [activeDay, setActiveDay] = useState<string | number>("all");
+  const [activeDay, setActiveDay] = useState<string | number>(4);
   const [selectedKeynote, setSelectedKeynote] = useState<"ok-chinda" | "paul-jeremiah">("ok-chinda");
   const currentKeynote = KEYNOTE_DATA[selectedKeynote];
 
-  const filteredSpeakers =
-    activeDay === "all" || activeDay === 4
-      ? speakers
-      : speakers.filter((s) => s.day === activeDay);
+  const filteredSpeakers = speakers;
 
   return (
     <section className="w-full">

@@ -103,4 +103,16 @@ export const speakers: Speaker[] = [
     tags: ["Mobile", "Open Source", "Web"],
     day: 4,
   },
+  {
+    id: "joy-akhanolu",
+    name: "Joy Akhanolu",
+    title: "Director, CMX Port Harcourt",
+    company: "CMX Connect · GDG Cloud PH · She Code Africa",
+    imageUrl: "https://i.ibb.co/B2Hrb0Xm/Joy-Akhanolu-Headshot.jpg",
+    bio: "Joy Akhanolu is a community & operations professional who works across technology, people, and the systems behind them. With 5+ years of experience spanning community building, events, executive and operations support, and project coordination, she brings a cross-functional perspective to how teams and communities work.\n\nHer work has taken her from coordinating technology events and partnerships to building community programs and supporting distributed teams. She has worked across CMX Connect Port Harcourt, GDG Cloud Port Harcourt, and She Code Africa Port Harcourt, contributing to initiatives that have brought together hundreds of people across the tech ecosystem.\n\nJoy is particularly interested in the mechanics behind participation: why people show up, what makes them stay, and how the right systems can turn participation into meaningful contribution.",
+    twitter: "https://x.com/MudinTY",
+    linkedin: "https://www.linkedin.com/in/joy-akhanolu/",
+    tags: ["Product Management", "Community", "Leadership"],
+    day: 4,
+  },
 ];

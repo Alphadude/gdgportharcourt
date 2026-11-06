@@ -175,6 +175,18 @@ export const sessions: Session[] = [
     type: "talk",
   },
   {
+    id: "d4-community-product",
+    title: "Community as a Product: Designing Experiences That Drive Activation, Retention and Contribution",
+    description: "Explore what happens when we stop treating community as a list of members to grow and start thinking about it as an experience to design, mapping the member journey from Join → Activate → Return → Participate → Contribute → Lead.",
+    startTime: "11:00 AM",
+    endTime: "11:45 AM",
+    day: 4,
+    track: "General",
+    room: "Cinema Hall 2",
+    speakerIds: ["joy-akhanolu"],
+    type: "talk",
+  },
+  {
     id: "d4-devfest-panel",
     title: "Panel: Scaling Scalable Tech Ventures & AI Innovations from South-South Nigeria",
     description: "Conversations with founders, senior engineering leaders, and Google Developer Experts on scaling products and talent across the region.",
@@ -183,7 +195,7 @@ export const sessions: Session[] = [
     day: 4,
     track: "Startup",
     room: "Grand Auditorium",
-    speakerIds: ["paul-jeremiah", "cedar-daniel", "samuel-amakiri", "chiehiura-nze", "saheed-adewumi", "austine-amah"],
+    speakerIds: ["paul-jeremiah", "cedar-daniel", "samuel-amakiri", "chiehiura-nze", "saheed-adewumi", "austine-amah", "joy-akhanolu"],
     type: "panel",
   },
 
