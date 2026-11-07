@@ -20,6 +20,18 @@ export const speakers: Speaker[] = [
     day: 4,
   },
   {
+    id: "sodiq-akinjobi",
+    name: "Sodiq Akinjobi",
+    title: "Program Manager, Google Developer Groups SSA",
+    company: "Google Developer Groups · Founder, API Conf Lagos",
+    imageUrl: "/speakers/sodiq-akinjobi.jpg",
+    bio: "Sodiq Akinjobi (widely known as @Geektutor) is a prominent tech ecosystem builder, software engineer, and Google Developer Program Manager supporting Google Developer Groups (GDG) across Sub-Saharan Africa. Through his work, he helps scale grassroots developer communities impacting hundreds of thousands of African developers annually.\n\nWith a background in Systems Engineering from the University of Lagos and an MBA from Quantic School of Business and Technology, Sodiq has spent over a decade empowering software engineers, technical founders, and open-source contributors across the continent. He is also the founder of API Conference Lagos and the creator of MorningScroll.\n\nAt DevFest Port Harcourt 2026, Sodiq takes the main stage for a keynote address on scaling pan-African developer talent, harnessing modern developer ecosystems, and building world-class products from regional hubs.",
+    twitter: "https://twitter.com/geektutor",
+    linkedin: "https://www.linkedin.com/in/sodiqakinjobi",
+    tags: ["Keynote", "Community", "Leadership"],
+    day: 4,
+  },
+  {
     id: "paul-jeremiah",
     name: "Paul Jeremiah",
     title: "Indie Hacker",
