@@ -6,35 +6,19 @@
 import { Session } from "@/lib/types";
 
 export const DAY_LABELS: Record<number, string> = {
-  1: "AUG 21",
-  2: "SEP 25",
-  3: "OCT 23",
   4: "NOV 28",
-  5: "DEC 11",
 };
 
 export const DAY_TITLES: Record<number, string> = {
-  1: "GDGPHC INNOVATION DAY",
-  2: "GDGPHC AI & CLOUD DAY",
-  3: "GDGPHC DEVELOPER DAY",
   4: "GDGPHC DEVFEST 2026 MAIN STAGE",
-  5: "GDGPHC CLOSING CEREMONY",
 };
 
 export const DAY_DESCRIPTIONS: Record<number, string> = {
-  1: "Kick off DevFest Port Harcourt 2026 with inspiring product design, user experience, and community building.",
-  2: "Deep dive into artificial intelligence, LLM edge deployments, distributed backend architectures, and multi-agent cloud desks.",
-  3: "Hands-on developer masterclasses across technical writing, reputation building, mobile engineering, and open source.",
   4: "DevFest Port Harcourt 2026 Main Event at Platinum Hall, Lemaco Gardens with premier keynotes and expert sessions.",
-  5: "Grand festival closing ceremony, awards, project demonstrations, and networking celebration.",
 };
 
 export const DAY_BG_COLORS: Record<number, { tabBg: string; contentBg: string; titleColor: string }> = {
-  1: { tabBg: "bg-[#FDF4CE]", contentBg: "bg-[#FDF4CE]", titleColor: "text-google-blue" },
-  2: { tabBg: "bg-[#D0F2FE]", contentBg: "bg-[#D0F2FE]", titleColor: "text-google-blue" },
-  3: { tabBg: "bg-[#FCE7F3]", contentBg: "bg-[#FCE7F3]", titleColor: "text-google-blue" },
   4: { tabBg: "bg-[#FFE7A5]", contentBg: "bg-[#FFE7A5]", titleColor: "text-google-blue" },
-  5: { tabBg: "bg-[#DCFCE7]", contentBg: "bg-[#DCFCE7]", titleColor: "text-google-blue" },
 };
 
 export const sessions: Session[] = [
