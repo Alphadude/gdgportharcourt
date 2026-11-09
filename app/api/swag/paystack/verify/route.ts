@@ -19,9 +19,16 @@ export async function GET(req: Request) {
       );
     }
 
-    const secretKey =
-      process.env.PAYSTACK_SECRET_KEY ||
-      "sk_test_57feab6e4412a93d331ab1f83e62c41e21cc0325";
+    const secretKey = process.env.PAYSTACK_SECRET_KEY;
+    if (!secretKey) {
+      return NextResponse.json(
+        {
+          success: false,
+          error: "Paystack secret key is not configured on the server.",
+        },
+        { status: 500 }
+      );
+    }
 
     const paystackRes = await fetch(
       `https://api.paystack.co/transaction/verify/${encodeURIComponent(reference)}`,

@@ -40,9 +40,7 @@ export default function SwagCheckoutModal({
     0
   );
 
-  const publicKey =
-    process.env.NEXT_PUBLIC_PAYSTACK_PUBLIC_KEY ||
-    "pk_test_2ba1958988afd6c6efdbf9018f29fbe200b67f76";
+  const publicKey = process.env.NEXT_PUBLIC_PAYSTACK_PUBLIC_KEY || "";
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
