@@ -7,7 +7,6 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { CartItem, CustomerDetails, SwagOrder } from "@/lib/types/swag";
-import { triggerPaystackInline } from "@/lib/paystack";
 
 interface SwagCheckoutModalProps {
   isOpen: boolean;
@@ -56,9 +55,9 @@ export default function SwagCheckoutModal({
 
     setIsSubmitting(true);
 
-    // Generate unique Order Reference
-    const randomSuffix = Math.floor(1000 + Math.random() * 9000);
-    const orderRef = `DFPH-SWAG-${randomSuffix}`;
+    // Generate unique Order Reference (timestamp-based to guarantee uniqueness in Paystack)
+    const uniqueSuffix = `${Date.now().toString(36)}-${Math.random().toString(36).substring(2, 6)}`.toUpperCase();
+    const orderRef = `DFPH-SWAG-${uniqueSuffix}`;
 
     const baseOrder: SwagOrder = {
       orderReference: orderRef,
@@ -93,106 +92,42 @@ export default function SwagCheckoutModal({
       return;
     }
 
-    // Paystack Online Payment Flow
-    const amountInKobo = Math.round(totalAmountNGN * 100);
-
-    // Try Paystack Inline Modal first
+    // Paystack Online Payment Flow via direct official checkout redirect
     try {
-      const openedInline = await triggerPaystackInline({
-        key: publicKey,
-        email: customer.email,
-        amount: amountInKobo,
-        ref: orderRef,
-        currency: "NGN",
-        metadata: {
-          customer_name: customer.fullName,
-          phone: customer.phone,
-          notes: customer.notes || "",
-          items: items.map((i) => `${i.quantity}x ${i.name} ${i.size || ""}`),
-        },
-        onSuccess: async (response) => {
-          // Verify with server
-          let verified = false;
-          try {
-            const verifyRes = await fetch(
-              `/api/swag/paystack/verify?reference=${encodeURIComponent(
-                response.reference
-              )}`
-            );
-            const verifyData = await verifyRes.json();
-            verified = verifyData.success && verifyData.status === "success";
-          } catch {
-            // fallback to client success response
-            verified = true;
-          }
-
-          const completedOrder: SwagOrder = {
-            ...baseOrder,
-            paymentStatus: verified ? "paid" : "awaiting_verification",
-            paystackReference: response.reference,
-            paidAt: new Date().toISOString(),
-          };
-
-          if (typeof window !== "undefined") {
-            const existing = JSON.parse(
-              localStorage.getItem("devfest_swag_orders") || "[]"
-            );
-            localStorage.setItem(
-              "devfest_swag_orders",
-              JSON.stringify([completedOrder, ...existing])
-            );
-            sessionStorage.setItem(
-              "latest_devfest_order",
-              JSON.stringify(completedOrder)
-            );
-          }
-
-          onOrderSuccess(completedOrder);
-          router.push(
-            `/swag/success?ref=${orderRef}&paystack_ref=${response.reference}`
-          );
-        },
-        onClose: () => {
-          setIsSubmitting(false);
-        },
+      const initRes = await fetch("/api/swag/paystack/initialize", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          customer,
+          items,
+          totalAmountNGN,
+          orderReference: orderRef,
+        }),
       });
 
-      if (!openedInline) {
-        // Fallback to server-side initialize endpoint
-        const initRes = await fetch("/api/swag/paystack/initialize", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({
-            customer,
-            items,
-            totalAmountNGN,
-            orderReference: orderRef,
-          }),
-        });
+      const initData = await initRes.json();
 
-        const initData = await initRes.json();
-
-        if (initData.success && initData.authorizationUrl) {
-          if (typeof window !== "undefined") {
-            const existing = JSON.parse(
-              localStorage.getItem("devfest_swag_orders") || "[]"
-            );
-            localStorage.setItem(
-              "devfest_swag_orders",
-              JSON.stringify([baseOrder, ...existing])
-            );
-            sessionStorage.setItem(
-              "latest_devfest_order",
-              JSON.stringify(baseOrder)
-            );
-            window.location.href = initData.authorizationUrl;
-          }
-        } else {
-          setErrorMessage(
-            initData.error || "Unable to launch Paystack checkout."
+      if (initData.success && initData.authorizationUrl) {
+        if (typeof window !== "undefined") {
+          const existing = JSON.parse(
+            localStorage.getItem("devfest_swag_orders") || "[]"
           );
-          setIsSubmitting(false);
+          localStorage.setItem(
+            "devfest_swag_orders",
+            JSON.stringify([baseOrder, ...existing])
+          );
+          sessionStorage.setItem(
+            "latest_devfest_order",
+            JSON.stringify(baseOrder)
+          );
+          // Redirect directly to Paystack's official checkout page (works on all devices, Safari & Chrome)
+          window.location.href = initData.authorizationUrl;
         }
+      } else {
+        setErrorMessage(
+          initData.error || "Unable to launch Paystack checkout. Please try again."
+        );
+        setIsSubmitting(false);
       }
     } catch (err: unknown) {
       const msg = err instanceof Error ? err.message : "Payment error";

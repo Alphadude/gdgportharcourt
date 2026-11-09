@@ -23,8 +23,14 @@ export async function POST(req: Request) {
       );
     }
 
-    const origin = req.headers.get("origin") || "http://localhost:3000";
-    const callbackUrl = `${origin}/swag/success?ref=${orderReference}`;
+    const host = req.headers.get("x-forwarded-host") || req.headers.get("host");
+    const proto = req.headers.get("x-forwarded-proto") || "https";
+    const headerOrigin = req.headers.get("origin");
+    const siteUrl =
+      process.env.NEXT_PUBLIC_SITE_URL ||
+      headerOrigin ||
+      (host ? `${proto}://${host}` : "https://gdgportharcourt.com.ng");
+    const callbackUrl = `${siteUrl}/swag/success?ref=${orderReference}`;
 
     // Paystack requires amount in Kobo (1 NGN = 100 Kobo)
     const amountInKobo = Math.round(Number(totalAmountNGN) * 100);
