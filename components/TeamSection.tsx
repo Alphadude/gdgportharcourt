@@ -14,17 +14,13 @@ interface TeamSectionProps {
 
 const DEPARTMENTS: { label: string; value: TeamDepartment }[] = [
   { label: "ALL", value: "all" },
-  { label: "ORGANIZING", value: "organizing" },
-  { label: "DESIGN", value: "design" },
-  { label: "ENGINEERING", value: "engineering" },
-  { label: "PRODUCT", value: "product" },
-  { label: "MARKETING", value: "marketing" },
-  { label: "QA", value: "qa" },
-  { label: "CONTENT", value: "content" },
+  { label: "GUEST SPEAKERS", value: "speakers" },
+  { label: "REGISTRATION", value: "registration" },
+  { label: "MEDIA & CONTENT", value: "media" },
 ];
 
 export default function TeamSection({ members }: TeamSectionProps) {
-  const [activeDept, setActiveDept] = useState<TeamDepartment>("content");
+  const [activeDept, setActiveDept] = useState<TeamDepartment>("all");
   const [viewMode, setViewMode] = useState<"list" | "grid">("list");
 
   const filteredMembers = members.filter((m) =>

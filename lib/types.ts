@@ -61,6 +61,9 @@ export interface FaqItem {
 
 export type TeamDepartment =
   | "all"
+  | "speakers"
+  | "registration"
+  | "media"
   | "organizing"
   | "design"
   | "engineering"
