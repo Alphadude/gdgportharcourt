@@ -123,6 +123,18 @@ export const sessions: Session[] = [
 
   // ── Day 4 (NOV 28) — DevFest Main Stage (Platinum Hall, Lemaco Gardens) ────
   {
+    id: "d4-registration",
+    title: "Registration",
+    description: "Attendee check-in, badge collection, swag distribution, and morning networking.",
+    startTime: "8:00 AM",
+    endTime: "9:30 AM",
+    day: 4,
+    track: "General",
+    room: "Welcome Foyer",
+    speakerIds: [],
+    type: "break",
+  },
+  {
     id: "d4-opening-keynote-chinda",
     title: "Keynote Address: Accelerating South-South Nigeria's Digital Economy & Youth Tech Empowerment",
     description: "Special Keynote Address by Hon. O.K. Chinda on advancing digital infrastructure, fostering youth tech capacity, and strengthening public-private partnerships across Rivers State.",
