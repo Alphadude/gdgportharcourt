@@ -21,13 +21,13 @@ const KEYNOTE_DATA = {
   "ok-chinda": {
     name: "Hon. O.K. Chinda",
     badge: "Keynote Speaker · Special Guest",
-    subBadge: "Legislative Leadership & Tech Growth",
+    subBadge: "Gubernatorial Front Runner · Rivers State (APC)",
     subBadgeColor: "bg-purple-500/20 border-purple-500/40 text-purple-300",
-    role: "Minority Leader, House of Representatives · Obio/Akpor Constituency",
+    role: "Former Minority Leader, House of Representatives · Front Runner for Governor of Rivers State",
     image: "/speakers/ok-chinda.jpg",
     bgColor: "bg-[#DCFCE7]",
     bioParagraphs: [
-      "Hon. Kingsley Ogundu Chinda (widely known as O.K. Chinda) is a leading Nigerian legislator, legal practitioner, and public policy leader. He represents the Obio/Akpor Federal Constituency of Rivers State in Nigeria's National Assembly, where he serves as the Minority Leader of the House of Representatives.",
+      "Hon. Kingsley Ogundu Chinda (widely known as O.K. Chinda) is a leading Nigerian legislator, legal practitioner, and public policy leader. A former Minority Leader of the House of Representatives representing the Obio/Akpor Federal Constituency, he resigned that office to contest the Rivers State Governorship election under the All Progressives Congress (APC), where he stands as the leading front runner for the office of the Governor of Rivers State.",
       "Throughout his legislative career, Hon. Chinda has been an ardent champion for digital literacy, youth-driven economic modernization, and sustainable infrastructure investments in Rivers State and the Niger Delta region. He has consistently sponsored bills advancing education reform, regional connectivity, and youth employment.",
       "At DevFest Port Harcourt 2026, Hon. O.K. Chinda joins the tech community to deliver a visionary Keynote Address on accelerating digital capacity, supporting grassroots technical talent, and creating public-private synergies that drive the South-South tech revolution.",
     ],
