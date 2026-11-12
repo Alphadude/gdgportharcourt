@@ -31,7 +31,7 @@ export default function SwagSection() {
 
         {/* ── Swag Package Cards Grid ────────────────────────────────────── */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10">
-          {/* ── Card 1: STANDARD SWAG ──────────────────────────────────── */}
+          {/* ── Card 1: OFFICIAL DEVELOPER TEE ──────────────────────────── */}
           <div className="bg-[#D0F2FE] rounded-3xl p-6 sm:p-8 border-4 border-[#3B82F6] text-black shadow-2xl flex flex-col justify-between transition-transform duration-300 hover:scale-[1.01]">
             <div>
               {/* Ticket Graphic at top */}
@@ -48,7 +48,7 @@ export default function SwagSection() {
                     DevFest Port Harcourt
                   </p>
                   <h3 className="font-akira font-black text-xl sm:text-2xl text-black uppercase tracking-tight">
-                    STANDARD
+                    OFFICIAL TEE
                   </h3>
                   <p className="text-[9px] font-sans font-bold text-gray-600 uppercase mt-0.5">
                     28 November 2026
@@ -59,53 +59,53 @@ export default function SwagSection() {
               {/* Package Header */}
               <div className="flex items-center justify-between gap-2 mb-2">
                 <h4 className="font-akira font-black text-lg sm:text-xl text-black uppercase tracking-tight">
-                  STANDARD SWAG
+                  DEVELOPER TEE
                 </h4>
                 <span className="font-akira font-black text-sm text-google-blue bg-white/70 px-3 py-1 rounded-full border border-black/10">
-                  ₦12,000
+                  ₦7,500
                 </span>
               </div>
 
               <p className="text-gray-800 text-xs sm:text-sm font-medium leading-relaxed mb-6">
-                Open to everyone — get the essential DevFest Port Harcourt 2026 merchandise pack.
+                Breathable 100% combed cotton tee screen-printed with official DevFest Akira typography.
               </p>
 
               {/* Feature Bullet List */}
               <ul className="space-y-3 text-xs sm:text-sm font-bold text-gray-900 mb-8">
                 <li className="flex items-center gap-3">
                   <span className="text-blue-600 font-extrabold text-base">→</span>
-                  Official DevFest T-Shirt &amp; Lanyard
+                  100% Ring-Spun Combed Cotton (180 GSM)
                 </li>
                 <li className="flex items-center gap-3">
                   <span className="text-blue-600 font-extrabold text-base">→</span>
-                  Custom Sticker Pack &amp; Notebook
+                  White &amp; Black Color Editions
                 </li>
                 <li className="flex items-center gap-3">
                   <span className="text-blue-600 font-extrabold text-base">→</span>
-                  Access to Sponsor Booth Swags
+                  Eco-friendly High-Density Silk Screen
                 </li>
                 <li className="flex items-center gap-3">
                   <span className="text-blue-600 font-extrabold text-base">→</span>
-                  Conference Tote Bag &amp; Badge
+                  Unisex Tailored Fit (S to 3XL)
                 </li>
               </ul>
             </div>
 
-            {/* CTA Button -> links to /swag?package=standard */}
+            {/* CTA Button -> links to /swag/tshirt */}
             <Link
-              href="/swag?package=standard"
+              href="/swag/tshirt"
               className="w-full py-4 rounded-full bg-[#F5B82A] text-black font-akira font-black text-xs sm:text-sm uppercase tracking-wider border-2 border-black hover:bg-yellow-400 transition-all hover:scale-[1.02] shadow-md text-center block cursor-pointer active:scale-95"
             >
-              BUY SWAG →
+              ORDER TEE →
             </Link>
           </div>
 
-          {/* ── Card 2: PRO SWAG ───────────────────────────────────────── */}
+          {/* ── Card 2: HEAVYWEIGHT FLEECE HOODIE ───────────────────────── */}
           <div className="bg-[#FDF4CE] rounded-3xl p-6 sm:p-8 border-4 border-[#F5B82A] text-black shadow-2xl flex flex-col justify-between transition-transform duration-300 hover:scale-[1.01] relative">
             <div>
               {/* Badge */}
               <div className="absolute -top-3.5 right-6 bg-black text-yellow-400 font-akira text-[10px] font-black uppercase px-3 py-1 rounded-full border-2 border-[#F5B82A] shadow-md tracking-wider">
-                MOST POPULAR
+                COMMUNITY FAVORITE
               </div>
 
               {/* Ticket Graphic at top */}
@@ -122,7 +122,7 @@ export default function SwagSection() {
                     DevFest Port Harcourt
                   </p>
                   <h3 className="font-akira font-black text-xl sm:text-2xl text-white uppercase tracking-tight">
-                    PRO SWAG
+                    FLEECE HOODIE
                   </h3>
                   <p className="text-[9px] font-sans font-bold text-gray-400 uppercase mt-0.5">
                     28 November 2026
@@ -133,44 +133,44 @@ export default function SwagSection() {
               {/* Package Header */}
               <div className="flex items-center justify-between gap-2 mb-2">
                 <h4 className="font-akira font-black text-lg sm:text-xl text-black uppercase tracking-tight">
-                  PRO SWAG
+                  FLEECE HOODIE
                 </h4>
                 <span className="font-akira font-black text-sm text-black bg-white/80 px-3 py-1 rounded-full border border-black/10">
-                  ₦28,000
+                  ₦18,000
                 </span>
               </div>
 
               <p className="text-gray-800 text-xs sm:text-sm font-medium leading-relaxed mb-6">
-                For techies who want the complete premium merchandise collection &amp; exclusive items.
+                Cozy 380gsm premium fleece hoodie with embroidered GDG insignia and kangaroo pocket.
               </p>
 
               {/* Feature Bullet List */}
               <ul className="space-y-3 text-xs sm:text-sm font-bold text-gray-900 mb-8">
                 <li className="flex items-center gap-3">
                   <span className="text-amber-600 font-extrabold text-base">→</span>
-                  Premium Heavyweight DevFest Hoodie
+                  380 GSM Heavyweight Brushed Fleece
                 </li>
                 <li className="flex items-center gap-3">
                   <span className="text-amber-600 font-extrabold text-base">→</span>
-                  Embroidered Snapback Cap &amp; Water Bottle
+                  Double-lined Hood with Metal Aglets
                 </li>
                 <li className="flex items-center gap-3">
                   <span className="text-amber-600 font-extrabold text-base">→</span>
-                  VIP Speaker Lounge Swag Box
+                  Bar-Tacked Reinforced Kangaroo Pocket
                 </li>
                 <li className="flex items-center gap-3">
                   <span className="text-amber-600 font-extrabold text-base">→</span>
-                  Complete Standard Pack + Exclusive Merch
+                  Shrink-Resistant Pre-washed Fabric
                 </li>
               </ul>
             </div>
 
-            {/* CTA Button -> links to /swag?package=pro */}
+            {/* CTA Button -> links to /swag/hoodie */}
             <Link
-              href="/swag?package=pro"
+              href="/swag/hoodie"
               className="w-full py-4 rounded-full bg-[#F5B82A] text-black font-akira font-black text-xs sm:text-sm uppercase tracking-wider border-2 border-black hover:bg-yellow-400 transition-all hover:scale-[1.02] shadow-md text-center block cursor-pointer active:scale-95"
             >
-              BUY PRO SWAG →
+              ORDER HOODIE →
             </Link>
           </div>
         </div>

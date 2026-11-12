@@ -21,8 +21,6 @@ export default function SwagStoreView() {
   const [selectedCategory, setSelectedCategory] = useState<"all" | SwagCategory>("all");
   const [cart, setCart] = useState<CartItem[]>([]);
   const [selectedSizes, setSelectedSizes] = useState<Record<string, SwagSize>>({
-    standard: "L",
-    pro: "L",
     hoodie: "L",
     tshirt: "L",
   });
@@ -145,9 +143,8 @@ export default function SwagStoreView() {
       />
 
       {/* ── Merchandise Grid ─────────────────────────────────────────── */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10 mb-16">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
         {filteredItems.map((item) => {
-          const isBundle = item.category === "bundle";
           const isDeepLinked = initialPackage === item.id;
           const selectedSize = selectedSizes[item.id] || "L";
           const currentColorOption = item.colors?.find(
@@ -159,7 +156,7 @@ export default function SwagStoreView() {
             <div
               key={item.id}
               id={`swag-item-${item.id}`}
-              className={`rounded-3xl p-6 sm:p-8 border-4 text-black shadow-2xl flex flex-col justify-between transition-all duration-300 relative ${
+              className={`rounded-3xl p-6 sm:p-7 border-4 text-black shadow-2xl flex flex-col justify-between transition-all duration-300 relative ${
                 item.borderColor
                   ? `border-[${item.borderColor}]`
                   : "border-black"
@@ -183,95 +180,42 @@ export default function SwagStoreView() {
               )}
 
               <div>
-                {/* Visual Header / Ticket Graphic for Bundles or Image preview for Individual Items */}
-                {isBundle ? (
-                  <div
-                    className={`rounded-2xl p-5 border-2 border-black relative mb-6 shadow-md flex items-center justify-between ${
-                      item.id === "pro"
-                        ? "bg-black text-white"
-                        : "bg-white text-black"
-                    }`}
-                  >
-                    <div
-                      className={`flex flex-col gap-1 shrink-0 border-r-2 border-dashed pr-4 ${
-                        item.id === "pro"
-                          ? "border-white/20"
-                          : "border-black/20"
-                      }`}
-                    >
-                      <div
-                        className={`w-1.5 h-12 inline-block ${
-                          item.id === "pro" ? "bg-white" : "bg-black"
-                        }`}
-                      />
-                      <div
-                        className={`w-1 h-12 inline-block ${
-                          item.id === "pro" ? "bg-white" : "bg-black"
-                        }`}
-                      />
-                    </div>
-
-                    <div className="text-center flex-1 px-4">
-                      <p
-                        className={`text-[10px] font-akira uppercase tracking-widest ${
-                          item.id === "pro"
-                            ? "text-yellow-400"
-                            : "text-gray-500"
-                        }`}
-                      >
-                        DevFest Port Harcourt 2026
-                      </p>
-                      <h3 className="font-akira font-black text-xl sm:text-2xl uppercase tracking-tight">
-                        {item.name.replace(" PACK", "")}
-                      </h3>
-                      <p
-                        className={`text-[9px] font-sans font-bold uppercase mt-0.5 ${
-                          item.id === "pro"
-                            ? "text-gray-400"
-                            : "text-gray-600"
-                        }`}
-                      >
-                        Official Merchandise Pass
-                      </p>
-                    </div>
+                {/* Visual Header / Image preview */}
+                <div
+                  className={`relative h-64 sm:h-72 rounded-2xl overflow-hidden mb-6 border-2 border-black shadow-md transition-colors duration-300 ${
+                    item.id === "tshirt" && currentColorOption?.name === "White"
+                      ? "bg-[#121214]"
+                      : item.id === "tshirt" && currentColorOption?.name === "Black"
+                      ? "bg-white"
+                      : item.id === "hoodie"
+                      ? "bg-white"
+                      : "bg-neutral-900"
+                  }`}
+                >
+                  <Image
+                    src={displayedImage}
+                    alt={`${item.name} ${currentColorOption?.name || ""}`}
+                    fill
+                    className={`${
+                      item.id === "tshirt" || item.id === "hoodie"
+                        ? "object-contain p-3"
+                        : "object-cover"
+                    } hover:scale-105 transition-transform duration-500`}
+                  />
+                  <div className="absolute top-3 left-3 bg-black/80 backdrop-blur-md px-3 py-1 rounded-full text-white text-[10px] font-akira uppercase border border-white/20">
+                    {item.category}
                   </div>
-                ) : (
-                  <div
-                    className={`relative h-64 sm:h-72 rounded-2xl overflow-hidden mb-6 border-2 border-black shadow-md transition-colors duration-300 ${
-                      item.id === "tshirt" && currentColorOption?.name === "White"
-                        ? "bg-[#121214]"
-                        : item.id === "tshirt" && currentColorOption?.name === "Black"
-                        ? "bg-white"
-                        : item.id === "hoodie"
-                        ? "bg-white"
-                        : "bg-neutral-900"
-                    }`}
-                  >
-                    <Image
-                      src={displayedImage}
-                      alt={`${item.name} ${currentColorOption?.name || ""}`}
-                      fill
-                      className={`${
-                        item.id === "tshirt" || item.id === "hoodie"
-                          ? "object-contain p-3"
-                          : "object-cover"
-                      } hover:scale-105 transition-transform duration-500`}
-                    />
-                    <div className="absolute top-3 left-3 bg-black/80 backdrop-blur-md px-3 py-1 rounded-full text-white text-[10px] font-akira uppercase border border-white/20">
-                      {item.category}
-                    </div>
 
-                    {currentColorOption && (
-                      <div className="absolute top-3 right-3 bg-black/80 backdrop-blur-md px-3 py-1 rounded-full text-white text-[10px] font-akira uppercase border border-white/20 flex items-center gap-1.5 shadow-sm">
-                        <span
-                          className="w-2.5 h-2.5 rounded-full border border-white/40"
-                          style={{ backgroundColor: currentColorOption.hex }}
-                        />
-                        <span>{currentColorOption.name}</span>
-                      </div>
-                    )}
-                  </div>
-                )}
+                  {currentColorOption && (
+                    <div className="absolute top-3 right-3 bg-black/80 backdrop-blur-md px-3 py-1 rounded-full text-white text-[10px] font-akira uppercase border border-white/20 flex items-center gap-1.5 shadow-sm">
+                      <span
+                        className="w-2.5 h-2.5 rounded-full border border-white/40"
+                        style={{ backgroundColor: currentColorOption.hex }}
+                      />
+                      <span>{currentColorOption.name}</span>
+                    </div>
+                  )}
+                </div>
 
                 {/* Name & Pricing Header */}
                 <div className="flex flex-wrap items-baseline justify-between gap-2 mb-2">

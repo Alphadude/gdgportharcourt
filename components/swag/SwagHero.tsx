@@ -22,7 +22,6 @@ export default function SwagHero({
 }: SwagHeroProps) {
   const categories: Array<{ id: "all" | SwagCategory; label: string }> = [
     { id: "all", label: "ALL MERCHANDISE" },
-    { id: "bundle", label: "SWAG PACKS & BUNDLES" },
     { id: "apparel", label: "APPAREL & HOODIES" },
     { id: "accessory", label: "ACCESSORIES & GEAR" },
   ];
