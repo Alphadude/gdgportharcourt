@@ -163,4 +163,16 @@ export const speakers: Speaker[] = [
     tags: ["Startup", "Web", "AI / ML"],
     day: 4,
   },
+  {
+    id: "philip-chidera",
+    name: "Philip Chidera",
+    title: "Product Designer & Co-founder",
+    company: "Termwise · Design Lead, PH Talent Tribe",
+    imageUrl: "/speakers/philip-chidera.png",
+    bio: "Philip Chidera is a Product Designer and entrepreneur who designs fintech, SaaS, Web3, and enterprise products for companies across Nigeria and internationally. His work includes Beevia, a fintech and messaging app for Drumbell Technologies, and business management solutions for ZIX Solutions.\n\nHe is also the Co-founder of Termwise, a school management platform helping Nigerian schools go digital. He serves as Design Lead for Port Harcourt Talent Tribe under ATC Africa and has trained over 70 designers while mentoring emerging talent. Philip speaks on AI, product design, and design thinking, sharing practical insights on building in the AI era, drawn from the products he has built.",
+    twitter: "https://x.com/philipchidera20",
+    linkedin: "https://www.linkedin.com/in/philip-chidera-1bba61281/",
+    tags: ["Design", "AI / ML", "Startup"],
+    day: 4,
+  },
 ];

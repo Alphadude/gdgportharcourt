@@ -195,6 +195,18 @@ export const sessions: Session[] = [
     type: "talk",
   },
   {
+    id: "d4-ai-future-design",
+    title: "AI and the Future of Design",
+    description: "AI tools can now generate a polished app interface in seconds. So what is a designer actually paid for? This session takes an evidence-based look at how AI is changing product design: what it does well, where it falls short, and why human judgment matters more than ever. It combines current industry data, real product examples, and a live challenge putting an AI-generated app side by side with a designer-led one.",
+    startTime: "11:45 AM",
+    endTime: "12:30 PM",
+    day: 4,
+    track: "AI / ML",
+    room: "Cinema Hall 1",
+    speakerIds: ["philip-chidera"],
+    type: "talk",
+  },
+  {
     id: "d4-securing-ai-model-armor",
     title: "Securing AI Agents with Model Armor",
     description: "Explore security considerations for building and deploying production AI agents. Learn how Google Cloud's Model Armor protects AI apps with security controls, prompt injection defense, sensitive data protection, and secure agent interactions.",
@@ -227,7 +239,7 @@ export const sessions: Session[] = [
     day: 4,
     track: "Startup",
     room: "Grand Auditorium",
-    speakerIds: ["paul-jeremiah", "cedar-daniel", "samuel-amakiri", "chiehiura-nze", "saheed-adewumi", "austine-amah", "joy-akhanolu", "caleb-duff", "shadrack-inusah", "sodiq-akinjobi"],
+    speakerIds: ["paul-jeremiah", "cedar-daniel", "samuel-amakiri", "chiehiura-nze", "saheed-adewumi", "austine-amah", "joy-akhanolu", "caleb-duff", "shadrack-inusah", "sodiq-akinjobi", "ihunanyachi-thompson", "philip-chidera"],
     type: "panel",
   },
 
