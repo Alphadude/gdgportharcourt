@@ -151,4 +151,16 @@ export const speakers: Speaker[] = [
     tags: ["AI / ML", "Cloud", "Security"],
     day: 4,
   },
+  {
+    id: "ihunanyachi-thompson",
+    name: "Ihunanyachi Thompson",
+    title: "CEO",
+    company: "Useful Media · DoxFlowy",
+    imageUrl: "/speakers/ihunanyachi-thompson.jpg",
+    bio: "Ihunanyachi Thompson is a software engineer, founder, and CEO of Useful Media and DoxFlowy — an AI-powered document automation and lifecycle management platform. He previously co-founded UsefulPDF, which was successfully acquired by Bonsai Technology, and founded Shabtech. Based in Port Harcourt, he is passionate about SaaS products, developer entrepreneurship, and building world-class technology from Africa.",
+    twitter: "https://x.com/devunanya",
+    linkedin: "https://www.linkedin.com/in/ihunanyachi-thompson",
+    tags: ["Startup", "Web", "AI / ML"],
+    day: 4,
+  },
 ];
