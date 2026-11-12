@@ -4,6 +4,7 @@
 // ─────────────────────────────────────────────────────────────────────────────
 
 import Link from "next/link";
+import Image from "next/image";
 
 export default function HeroSection() {
   return (
@@ -11,6 +12,23 @@ export default function HeroSection() {
       className="relative min-h-[90vh] flex flex-col justify-center overflow-hidden bg-[#FAF7EE] text-black pt-28 pb-16 px-6 sm:px-12 lg:px-20"
       aria-label="Hero section"
     >
+      {/* ── Port Harcourt Architecture Skyline Spotlight (Behind text) ───── */}
+      <div
+        className="absolute inset-0 flex items-center justify-center pointer-events-none select-none overflow-hidden z-0"
+        aria-hidden="true"
+      >
+        <div className="w-full max-w-7xl px-4 sm:px-8 opacity-[0.15] sm:opacity-[0.20]">
+          <Image
+            src="/ph-architecture.svg"
+            alt="Port Harcourt Architecture Skyline"
+            width={1324}
+            height={346}
+            priority
+            className="w-full h-auto object-contain object-center scale-105"
+          />
+        </div>
+      </div>
+
       {/* ── Main content container ────────────────────────────────────────── */}
       <div className="max-w-7xl mx-auto w-full relative z-10">
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-8 mb-12">
