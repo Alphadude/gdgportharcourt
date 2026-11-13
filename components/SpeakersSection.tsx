@@ -18,24 +18,6 @@ const DAY_PILLS = [
 ];
 
 const KEYNOTE_DATA = {
-  "ok-chinda": {
-    name: "Hon. O.K. Chinda",
-    badge: "Keynote Speaker · Special Guest",
-    subBadge: "Gubernatorial Front Runner · Rivers State (APC)",
-    subBadgeColor: "bg-purple-500/20 border-purple-500/40 text-purple-300",
-    role: "Former Minority Leader, House of Representatives · Front Runner for Governor of Rivers State",
-    image: "/speakers/ok-chinda.jpg",
-    bgColor: "bg-[#DCFCE7]",
-    bioParagraphs: [
-      "Hon. Kingsley Ogundu Chinda (widely known as O.K. Chinda) is a leading Nigerian legislator, legal practitioner, and public policy leader. A former Minority Leader of the House of Representatives representing the Obio/Akpor Federal Constituency, he resigned that office to contest the Rivers State Governorship election under the All Progressives Congress (APC), where he stands as the leading front runner for the office of the Governor of Rivers State.",
-      "Throughout his legislative career, Hon. Chinda has been an ardent champion for digital literacy, youth-driven economic modernization, and sustainable infrastructure investments in Rivers State and the Niger Delta region. He has consistently sponsored bills advancing education reform, regional connectivity, and youth employment.",
-      "At DevFest Port Harcourt 2026, Hon. O.K. Chinda joins the tech community to deliver a visionary Keynote Address on accelerating digital capacity, supporting grassroots technical talent, and creating public-private synergies that drive the South-South tech revolution.",
-    ],
-    skills: ["Public Policy", "Digital Inclusion", "Youth Empowerment", "Economic Growth", "Legislative Reform"],
-    twitter: "https://x.com/OKChinda",
-    twitterHandle: "@OKChinda",
-    linkedin: "https://okchinda.org",
-  },
   "sodiq-akinjobi": {
     name: "Sodiq Akinjobi",
     badge: "Keynote Speaker · Ecosystem Leader",
@@ -54,11 +36,47 @@ const KEYNOTE_DATA = {
     twitterHandle: "@geektutor",
     linkedin: "https://www.linkedin.com/in/sodiqakinjobi",
   },
+  "ayaosi-godfrey": {
+    name: "Ayaosi Godfrey",
+    badge: "Community Lead · Engineering Executive",
+    subBadge: "Lead GDG Port Harcourt · CTO Southbridge",
+    subBadgeColor: "bg-yellow-500/20 border-yellow-500/40 text-yellow-300",
+    role: "Lead Organizer, Google Developer Group (GDG) Port Harcourt · Chief Technology Officer, Southbridge",
+    image: "/speakers/ayaosi-godfrey.jpg",
+    bgColor: "bg-[#FEF08A]",
+    bioParagraphs: [
+      "Ayaosi Godfrey is an accomplished software engineer, technology leader, and the Lead Organizer of Google Developer Group (GDG) Port Harcourt. As the Chief Technology Officer at Southbridge, he spearheads high-impact engineering initiatives, scalable architectural solutions, and cutting-edge software products.",
+      "A passionate advocate for developer growth and community transformation in the Niger Delta, Godfrey has been instrumental in mentoring emerging talent, driving collaborative innovation, and uniting thousands of developers under the GDG Port Harcourt umbrella.",
+      "At DevFest Port Harcourt 2026, Ayaosi Godfrey delivers opening remarks and insights on fostering world-class engineering standards, unlocking local technical potential, and positioning the South-South tech ecosystem on the global stage.",
+    ],
+    skills: ["Engineering Leadership", "Cloud Architecture", "Ecosystem Building", "Community Strategy", "Product Innovation"],
+    twitter: "https://x.com/gdgphc",
+    twitterHandle: "@gdgphc",
+    linkedin: "https://www.linkedin.com/in/ayaosi-godfrey",
+  },
+  "ok-chinda": {
+    name: "Hon. O.K. Chinda",
+    badge: "Keynote Speaker · Special Guest",
+    subBadge: "Gubernatorial Front Runner · Rivers State (APC)",
+    subBadgeColor: "bg-purple-500/20 border-purple-500/40 text-purple-300",
+    role: "Former Minority Leader, House of Representatives · Front Runner for Governor of Rivers State",
+    image: "/speakers/ok-chinda.jpg",
+    bgColor: "bg-[#DCFCE7]",
+    bioParagraphs: [
+      "Hon. Kingsley Ogundu Chinda (widely known as O.K. Chinda) is a leading Nigerian legislator, legal practitioner, and public policy leader. A former Minority Leader of the House of Representatives representing the Obio/Akpor Federal Constituency, he resigned that office to contest the Rivers State Governorship election under the All Progressives Congress (APC), where he stands as the leading front runner for the office of the Governor of Rivers State.",
+      "Throughout his legislative career, Hon. Chinda has been an ardent champion for digital literacy, youth-driven economic modernization, and sustainable infrastructure investments in Rivers State and the Niger Delta region. He has consistently sponsored bills advancing education reform, regional connectivity, and youth employment.",
+      "At DevFest Port Harcourt 2026, Hon. O.K. Chinda joins the tech community to deliver a visionary Keynote Address on accelerating digital capacity, supporting grassroots technical talent, and creating public-private synergies that drive the South-South tech revolution.",
+    ],
+    skills: ["Public Policy", "Digital Inclusion", "Youth Empowerment", "Economic Growth", "Legislative Reform"],
+    twitter: "https://x.com/OKChinda",
+    twitterHandle: "@OKChinda",
+    linkedin: "https://okchinda.org",
+  },
 };
 
 export default function SpeakersSection({ speakers }: SpeakersSectionProps) {
   const [activeDay, setActiveDay] = useState<string | number>(4);
-  const [selectedKeynote, setSelectedKeynote] = useState<"ok-chinda" | "sodiq-akinjobi">("ok-chinda");
+  const [selectedKeynote, setSelectedKeynote] = useState<"sodiq-akinjobi" | "ayaosi-godfrey" | "ok-chinda">("sodiq-akinjobi");
   const currentKeynote = KEYNOTE_DATA[selectedKeynote];
 
   const filteredSpeakers = speakers;
@@ -94,7 +112,7 @@ export default function SpeakersSection({ speakers }: SpeakersSectionProps) {
         </div>
       </div>
 
-      {/* ── Featured Keynote Speaker Spotlight (Hon. O.K. Chinda & Sodiq Akinjobi) ──────── */}
+      {/* ── Featured Keynote Speaker Spotlight (Sodiq Akinjobi, Ayaosi Godfrey & Hon. O.K. Chinda) ──────── */}
       <div className="mb-14 sm:mb-20 rounded-3xl bg-gradient-to-br from-white/[0.08] via-white/[0.04] to-white/[0.02] border border-white/15 p-6 sm:p-10 lg:p-12 relative overflow-hidden backdrop-blur-md shadow-2xl">
         {/* Glow ambient background effects */}
         <div className="absolute top-0 right-0 w-80 h-80 bg-google-blue/20 rounded-full blur-[100px] pointer-events-none" />
@@ -105,21 +123,11 @@ export default function SpeakersSection({ speakers }: SpeakersSectionProps) {
           <div className="flex items-center gap-2">
             <span className="w-2.5 h-2.5 rounded-full bg-[#FBBC04] animate-pulse" />
             <span className="font-akira font-black text-xs sm:text-sm text-yellow-400 uppercase tracking-widest">
-              DevFest 2026 Keynote Speakers
+              DevFest 2026 Keynote & Featured Leaders
             </span>
           </div>
 
-          <div className="flex items-center gap-2">
-            <button
-              onClick={() => setSelectedKeynote("ok-chinda")}
-              className={`px-4 sm:px-6 py-2 rounded-full font-akira text-xs font-bold uppercase tracking-wider transition-all cursor-pointer ${
-                selectedKeynote === "ok-chinda"
-                  ? "bg-[#F5B82A] text-black shadow-md scale-105"
-                  : "bg-white/10 text-white hover:bg-white/15 border border-white/20"
-              }`}
-            >
-              ★ Hon. O.K. Chinda
-            </button>
+          <div className="flex items-center gap-2 flex-wrap">
             <button
               onClick={() => setSelectedKeynote("sodiq-akinjobi")}
               className={`px-4 sm:px-6 py-2 rounded-full font-akira text-xs font-bold uppercase tracking-wider transition-all cursor-pointer ${
@@ -129,6 +137,26 @@ export default function SpeakersSection({ speakers }: SpeakersSectionProps) {
               }`}
             >
               ★ Sodiq Akinjobi
+            </button>
+            <button
+              onClick={() => setSelectedKeynote("ayaosi-godfrey")}
+              className={`px-4 sm:px-6 py-2 rounded-full font-akira text-xs font-bold uppercase tracking-wider transition-all cursor-pointer ${
+                selectedKeynote === "ayaosi-godfrey"
+                  ? "bg-[#F5B82A] text-black shadow-md scale-105"
+                  : "bg-white/10 text-white hover:bg-white/15 border border-white/20"
+              }`}
+            >
+              ★ Ayaosi Godfrey
+            </button>
+            <button
+              onClick={() => setSelectedKeynote("ok-chinda")}
+              className={`px-4 sm:px-6 py-2 rounded-full font-akira text-xs font-bold uppercase tracking-wider transition-all cursor-pointer ${
+                selectedKeynote === "ok-chinda"
+                  ? "bg-[#F5B82A] text-black shadow-md scale-105"
+                  : "bg-white/10 text-white hover:bg-white/15 border border-white/20"
+              }`}
+            >
+              ★ Hon. O.K. Chinda
             </button>
           </div>
         </div>

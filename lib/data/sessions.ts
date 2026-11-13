@@ -135,6 +135,18 @@ export const sessions: Session[] = [
     type: "break",
   },
   {
+    id: "d4-opening-address-godfrey",
+    title: "Opening Address: The South-South Tech Renaissance & The Future of GDG Port Harcourt",
+    description: "Welcome address and opening keynote by Ayaosi Godfrey, Lead Organizer of GDG Port Harcourt and CTO at Southbridge, on scaling regional talent, building collaborative ecosystems, and driving technical excellence.",
+    startTime: "8:45 AM",
+    endTime: "9:00 AM",
+    day: 4,
+    track: "General",
+    room: "Grand Auditorium",
+    speakerIds: ["ayaosi-godfrey"],
+    type: "keynote",
+  },
+  {
     id: "d4-opening-keynote-chinda",
     title: "Keynote Address: Accelerating South-South Nigeria's Digital Economy & Youth Tech Empowerment",
     description: "Special Keynote Address by Hon. O.K. Chinda on advancing digital infrastructure, fostering youth tech capacity, and strengthening public-private partnerships across Rivers State.",
@@ -239,7 +251,7 @@ export const sessions: Session[] = [
     day: 4,
     track: "Startup",
     room: "Grand Auditorium",
-    speakerIds: ["paul-jeremiah", "cedar-daniel", "samuel-amakiri", "chiehiura-nze", "saheed-adewumi", "austine-amah", "joy-akhanolu", "caleb-duff", "shadrack-inusah", "sodiq-akinjobi", "ihunanyachi-thompson", "philip-chidera"],
+    speakerIds: ["sodiq-akinjobi", "ayaosi-godfrey", "ok-chinda", "paul-jeremiah", "cedar-daniel", "samuel-amakiri", "chiehiura-nze", "saheed-adewumi", "austine-amah", "joy-akhanolu", "caleb-duff", "shadrack-inusah", "ihunanyachi-thompson", "philip-chidera"],
     type: "panel",
   },
 
