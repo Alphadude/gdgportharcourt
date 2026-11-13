@@ -4,6 +4,7 @@
 // Links directly to the dedicated DevFest Swag Store at /swag
 // ─────────────────────────────────────────────────────────────────────────────
 import Link from "next/link";
+import Image from "next/image";
 
 export default function SwagSection() {
   return (
@@ -34,25 +35,22 @@ export default function SwagSection() {
           {/* ── Card 1: OFFICIAL DEVELOPER TEE ──────────────────────────── */}
           <div className="bg-[#D0F2FE] rounded-3xl p-6 sm:p-8 border-4 border-[#3B82F6] text-black shadow-2xl flex flex-col justify-between transition-transform duration-300 hover:scale-[1.01]">
             <div>
-              {/* Ticket Graphic at top */}
-              <div className="bg-white rounded-2xl p-6 border-2 border-black relative mb-6 shadow-md flex items-center justify-between">
-                {/* Barcode on left */}
-                <div className="flex flex-col gap-1 shrink-0 border-r-2 border-dashed border-black/20 pr-4">
-                  <div className="w-1.5 h-12 bg-black inline-block" />
-                  <div className="w-1 h-12 bg-black inline-block" />
+              {/* Product Image Showcase */}
+              <div className="relative aspect-[16/10] sm:aspect-[16/11] rounded-2xl overflow-hidden border-2 border-black bg-white mb-6 shadow-md flex items-center justify-center p-2 group">
+                <Image
+                  src="/swag/official-developer-tee-white.png"
+                  alt="DevFest Port Harcourt Official Developer Tee"
+                  fill
+                  className="object-contain p-2 group-hover:scale-105 transition-transform duration-500"
+                />
+                {/* Badge tags */}
+                <div className="absolute top-3 left-3 bg-black/85 backdrop-blur-sm px-3 py-1 rounded-full text-white text-[9px] font-akira uppercase tracking-wider border border-white/20">
+                  OFFICIAL TEE
                 </div>
-
-                {/* Ticket Title */}
-                <div className="text-center flex-1 px-4">
-                  <p className="text-[10px] font-akira text-gray-500 uppercase tracking-widest">
-                    DevFest Port Harcourt
-                  </p>
-                  <h3 className="font-akira font-black text-xl sm:text-2xl text-black uppercase tracking-tight">
-                    OFFICIAL TEE
-                  </h3>
-                  <p className="text-[9px] font-sans font-bold text-gray-600 uppercase mt-0.5">
-                    28 November 2026
-                  </p>
+                <div className="absolute top-3 right-3 bg-white/95 backdrop-blur-sm px-2.5 py-1 rounded-full text-black text-[9px] font-sans font-extrabold uppercase tracking-tight border border-black/20 shadow-sm flex items-center gap-1.5">
+                  <span className="w-2 h-2 rounded-full bg-white border border-black/40 inline-block" />
+                  <span className="w-2 h-2 rounded-full bg-black inline-block" />
+                  <span>2 Colors</span>
                 </div>
               </div>
 
@@ -108,25 +106,21 @@ export default function SwagSection() {
                 COMMUNITY FAVORITE
               </div>
 
-              {/* Ticket Graphic at top */}
-              <div className="bg-black text-white rounded-2xl p-6 border-2 border-black relative mb-6 shadow-md flex items-center justify-between">
-                {/* Barcode on left */}
-                <div className="flex flex-col gap-1 shrink-0 border-r-2 border-dashed border-white/20 pr-4">
-                  <div className="w-1.5 h-12 bg-white inline-block" />
-                  <div className="w-1 h-12 bg-white inline-block" />
+              {/* Product Image Showcase */}
+              <div className="relative aspect-[16/10] sm:aspect-[16/11] rounded-2xl overflow-hidden border-2 border-black bg-[#121214] mb-6 shadow-md flex items-center justify-center p-2 group">
+                <Image
+                  src="/swag/heavyweight-fleece-hoodie.png"
+                  alt="DevFest Port Harcourt Fleece Hoodie"
+                  fill
+                  className="object-contain p-2 group-hover:scale-105 transition-transform duration-500"
+                />
+                {/* Badge tags */}
+                <div className="absolute top-3 left-3 bg-black/85 backdrop-blur-sm px-3 py-1 rounded-full text-[#F5B82A] text-[9px] font-akira uppercase tracking-wider border border-[#F5B82A]/30">
+                  FLEECE HOODIE
                 </div>
-
-                {/* Ticket Title */}
-                <div className="text-center flex-1 px-4">
-                  <p className="text-[10px] font-akira text-yellow-400 uppercase tracking-widest">
-                    DevFest Port Harcourt
-                  </p>
-                  <h3 className="font-akira font-black text-xl sm:text-2xl text-white uppercase tracking-tight">
-                    FLEECE HOODIE
-                  </h3>
-                  <p className="text-[9px] font-sans font-bold text-gray-400 uppercase mt-0.5">
-                    28 November 2026
-                  </p>
+                <div className="absolute top-3 right-3 bg-black/80 backdrop-blur-sm px-2.5 py-1 rounded-full text-gray-200 text-[9px] font-sans font-extrabold uppercase tracking-tight border border-white/20 shadow-sm flex items-center gap-1.5">
+                  <span className="w-2 h-2 rounded-full bg-[#18181B] border border-white/40 inline-block" />
+                  <span>Carbon Black</span>
                 </div>
               </div>
 
