@@ -4,6 +4,7 @@
 // ─────────────────────────────────────────────────────────────────────────────
 
 import { NextResponse } from "next/server";
+import { recordSwagOrderToGoogleSheet } from "@/lib/services/ordersSheet";
 
 export const dynamic = "force-dynamic";
 
@@ -55,6 +56,78 @@ export async function GET(req: Request) {
     }
 
     const tx = data.data;
+
+    if (tx.status === "success") {
+      const meta = tx.metadata || {};
+      const customFields = Array.isArray(meta.custom_fields)
+        ? meta.custom_fields
+        : [];
+      const getField = (name: string) =>
+        customFields.find(
+          (f: { variable_name: string; value: string }) => f.variable_name === name
+        )?.value || "";
+
+      const customerName =
+        meta.customer_name ||
+        getField("customer_name") ||
+        `${tx.customer?.first_name || ""} ${tx.customer?.last_name || ""}`.trim() ||
+        "DevFest Attendee";
+
+      const customerPhone =
+        meta.customer_phone ||
+        getField("phone_number") ||
+        tx.customer?.phone ||
+        "";
+
+      const itemsSummary =
+        meta.items_summary ||
+        getField("order_items") ||
+        (Array.isArray(meta.items)
+          ? meta.items
+              .map(
+                (i: { name?: string; size?: string; color?: string; quantity?: number }) =>
+                  `${i.quantity || 1}x ${i.name || "Item"}${
+                    i.size ? ` (${i.size})` : ""
+                  }${i.color ? ` [${i.color}]` : ""}`
+              )
+              .join(", ")
+          : "DevFest Official Swag");
+
+      const sizes =
+        meta.sizes ||
+        (Array.isArray(meta.items)
+          ? meta.items
+              .map((i: { size?: string }) => i.size)
+              .filter(Boolean)
+              .join(", ")
+          : "");
+
+      const colors =
+        meta.colors ||
+        (Array.isArray(meta.items)
+          ? meta.items
+              .map((i: { color?: string }) => i.color)
+              .filter(Boolean)
+              .join(", ")
+          : "");
+
+      // Record to Google Sheet (non-blocking for fast UI response)
+      recordSwagOrderToGoogleSheet({
+        orderReference: meta.order_reference || tx.reference,
+        paystackReference: tx.reference,
+        customerName,
+        email: tx.customer?.email || meta.customer_email || "",
+        phone: customerPhone,
+        itemsSummary,
+        sizes,
+        colors,
+        amountNGN: tx.amount / 100,
+        paidAt: tx.paid_at,
+        paymentChannel: tx.channel,
+      }).catch((err) => {
+        console.error("[Verify] Non-blocking Google Sheet write failure:", err);
+      });
+    }
 
     return NextResponse.json({
       success: true,

@@ -53,6 +53,24 @@ export async function POST(req: Request) {
           reference: orderReference,
           callback_url: callbackUrl,
           metadata: {
+            order_reference: orderReference,
+            customer_name: customer.fullName,
+            customer_email: customer.email,
+            customer_phone: customer.phone,
+            items_summary: items
+              ?.map(
+                (i: { name: string; size?: string; color?: string; quantity: number }) =>
+                  `${i.quantity}x ${i.name}${i.size ? ` (Size: ${i.size})` : ""}${i.color ? ` [${i.color}]` : ""}`
+              )
+              .join(", "),
+            sizes: items
+              ?.map((i: { size?: string }) => i.size)
+              .filter(Boolean)
+              .join(", "),
+            colors: items
+              ?.map((i: { color?: string }) => i.color)
+              .filter(Boolean)
+              .join(", "),
             custom_fields: [
               {
                 display_name: "Customer Name",
@@ -69,8 +87,8 @@ export async function POST(req: Request) {
                 variable_name: "order_items",
                 value: items
                   ?.map(
-                    (i: { name: string; size?: string; quantity: number }) =>
-                      `${i.quantity}x ${i.name} ${i.size ? `(${i.size})` : ""}`
+                    (i: { name: string; size?: string; color?: string; quantity: number }) =>
+                      `${i.quantity}x ${i.name}${i.size ? ` (${i.size})` : ""}${i.color ? ` [${i.color}]` : ""}`
                   )
                   .join(", "),
               },
