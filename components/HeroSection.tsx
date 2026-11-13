@@ -17,7 +17,7 @@ export default function HeroSection() {
         className="absolute inset-x-0 bottom-0 pointer-events-none select-none overflow-hidden z-0 flex items-end justify-center"
         aria-hidden="true"
       >
-        <div className="w-full min-w-[768px] md:min-w-full opacity-[0.25] sm:opacity-[0.32] leading-none">
+        <div className="w-full min-w-[768px] md:min-w-full opacity-[0.35] sm:opacity-[0.45] leading-none">
           <Image
             src="/ph-architecture.svg"
             alt="Port Harcourt Architecture Skyline"
@@ -82,26 +82,20 @@ export default function HeroSection() {
           </div>
         </div>
 
-        {/* Subtitle & Date Location Badges */}
-        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 pt-6 border-t border-black/10">
-          <p className="text-gray-800 text-lg sm:text-xl font-medium max-w-xl leading-relaxed">
-            Tech &amp; developer gathering (100% Free) — AI, Cloud, Mobile, Web &amp; DevOps at Platinum Hall, Lemaco Gardens, Port Harcourt.
-          </p>
-
-          <div className="flex items-center gap-3">
-            <span className="px-5 py-2.5 rounded-full bg-emerald-600 text-white font-sans text-xs font-bold uppercase tracking-wider">
-              100% Free Event
-            </span>
-            <span className="px-5 py-2.5 rounded-full bg-black text-white font-sans text-xs font-bold uppercase tracking-wider">
-              28 Nov, 2026
-            </span>
-            <Link
-              href="/schedule"
-              className="px-5 py-2.5 rounded-full bg-white text-black border-2 border-black font-sans text-xs font-bold uppercase tracking-wider hover:bg-gray-100 transition-colors"
-            >
-              View Schedule
-            </Link>
-          </div>
+        {/* Date Location Badges */}
+        <div className="flex flex-wrap items-center gap-3 pt-6">
+          <span className="px-5 py-2.5 rounded-full bg-emerald-600 text-white font-sans text-xs font-bold uppercase tracking-wider">
+            100% Free Event
+          </span>
+          <span className="px-5 py-2.5 rounded-full bg-black text-white font-sans text-xs font-bold uppercase tracking-wider">
+            28 Nov, 2026
+          </span>
+          <Link
+            href="/schedule"
+            className="px-5 py-2.5 rounded-full bg-white text-black border-2 border-black font-sans text-xs font-bold uppercase tracking-wider hover:bg-gray-100 transition-colors"
+          >
+            View Schedule
+          </Link>
         </div>
       </div>
     </section>
