@@ -142,8 +142,8 @@ export default function SwagStoreView() {
         onOpenCart={() => setIsCartOpen(true)}
       />
 
-      {/* ── Merchandise Grid ─────────────────────────────────────────── */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+      {/* ── Merchandise Grid (Uniform 50/50 Split) ─────────────────── */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10 mb-16">
         {filteredItems.map((item) => {
           const isDeepLinked = initialPackage === item.id;
           const selectedSize = selectedSizes[item.id] || "L";
