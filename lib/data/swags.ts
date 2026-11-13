@@ -99,33 +99,4 @@ export const SWAG_ITEMS: SwagItem[] = [
     ],
     inStock: true,
   },
-  {
-    id: "sticker-pack",
-    name: "TECH STICKER & NOTEBOOK BUNDLE",
-    tagline: "20+ die-cut waterproof vinyl stickers and dot-grid developer journal",
-    priceNGN: 4500,
-    category: "accessory",
-    description:
-      "Personalize your laptop with vibrant, scratch-resistant tech stickers paired with a 160-page hardcover dot-grid journal.",
-    longDescription:
-      "Upgrade your laptop, desk, and developer setup. This pack includes over 20 unique die-cut stickers featuring programming jokes, Android mascots, AI neural symbols, Google Cloud emblems, and Port Harcourt tech slogans. Paired with an A5 hardcover dot-grid notebook perfect for sketching system architectures, wireframes, and conference notes.",
-    features: [
-      "20+ Waterproof Vinyl Die-Cut Stickers",
-      "Hardcover A5 Dot-Grid Developer Journal",
-      "Elastic Band & Ribbon Marker",
-      "Fade-proof UV Lamination",
-    ],
-    image: "/devfest-2025/girls.jpg",
-    gallery: [
-      "/devfest-2025/girls.jpg",
-      "/devfest-2025/community.jpg",
-    ],
-    specifications: {
-      "Sticker Count": "22 Unique Die-Cut Vinyl Stickers",
-      "Sticker Durability": "Waterproof, scratch-proof, sunlight-resistant",
-      "Notebook Pages": "160 Pages (80 Sheets) 100 GSM Ivory Dot-Grid Paper",
-      "Binding": "Hardcover Thread-Bound (Lies 180° Flat)",
-    },
-    inStock: true,
-  },
 ];
