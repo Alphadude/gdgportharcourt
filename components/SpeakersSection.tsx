@@ -57,9 +57,9 @@ const KEYNOTE_DATA = {
   "ok-chinda": {
     name: "Hon. O.K. Chinda",
     badge: "Keynote Speaker · Special Guest",
-    subBadge: "Gubernatorial Front Runner · Rivers State (APC)",
+    subBadge: "Former Minority Leader · House of Representatives",
     subBadgeColor: "bg-purple-500/20 border-purple-500/40 text-purple-300",
-    role: "Former Minority Leader, House of Representatives · Front Runner for Governor of Rivers State",
+    role: "Former Minority Leader, House of Representatives",
     image: "/speakers/ok-chinda.jpg",
     bgColor: "bg-[#DCFCE7]",
     bioParagraphs: [
