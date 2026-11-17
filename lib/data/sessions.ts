@@ -148,15 +148,15 @@ export const sessions: Session[] = [
   },
   {
     id: "d4-opening-keynote-chinda",
-    title: "Keynote Address: Accelerating South-South Nigeria's Digital Economy & Youth Tech Empowerment",
-    description: "Special Keynote Address by Hon. O.K. Chinda on advancing digital infrastructure, fostering youth tech capacity, and strengthening public-private partnerships across Rivers State.",
+    title: "Special Address: Accelerating South-South Nigeria's Digital Economy & Youth Tech Empowerment",
+    description: "Special Address by Hon. O.K. Chinda on advancing digital infrastructure, fostering youth tech capacity, and strengthening public-private partnerships across Rivers State.",
     startTime: "9:00 AM",
     endTime: "9:30 AM",
     day: 4,
     track: "General",
     room: "Grand Auditorium",
     speakerIds: ["ok-chinda"],
-    type: "keynote",
+    type: "talk",
   },
   {
     id: "d4-ecosystem-keynote-sodiq",

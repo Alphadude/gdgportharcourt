@@ -54,29 +54,11 @@ const KEYNOTE_DATA = {
     twitterHandle: "@gdgphc",
     linkedin: "https://www.linkedin.com/in/ayaosi-godfrey",
   },
-  "ok-chinda": {
-    name: "Hon. O.K. Chinda",
-    badge: "Keynote Speaker · Special Guest",
-    subBadge: "Former Minority Leader · House of Representatives",
-    subBadgeColor: "bg-purple-500/20 border-purple-500/40 text-purple-300",
-    role: "Former Minority Leader, House of Representatives",
-    image: "/speakers/ok-chinda.jpg",
-    bgColor: "bg-[#DCFCE7]",
-    bioParagraphs: [
-      "Hon. Kingsley Ogundu Chinda (widely known as O.K. Chinda) is a leading Nigerian legislator, legal practitioner, and public policy leader. He is a former Minority Leader of the House of Representatives representing the Obio/Akpor Federal Constituency.",
-      "Throughout his legislative career, Hon. Chinda has been an ardent champion for digital literacy, youth-driven economic modernization, and sustainable infrastructure investments in Rivers State and the Niger Delta region. He has consistently sponsored bills advancing education reform, regional connectivity, and youth employment.",
-      "At DevFest Port Harcourt 2026, Hon. O.K. Chinda joins the tech community to deliver a visionary Keynote Address on accelerating digital capacity, supporting grassroots technical talent, and creating public-private synergies that drive the South-South tech revolution.",
-    ],
-    skills: ["Public Policy", "Digital Inclusion", "Youth Empowerment", "Economic Growth", "Legislative Reform"],
-    twitter: "https://x.com/OKChinda",
-    twitterHandle: "@OKChinda",
-    linkedin: "https://okchinda.org",
-  },
 };
 
 export default function SpeakersSection({ speakers }: SpeakersSectionProps) {
   const [activeDay, setActiveDay] = useState<string | number>(4);
-  const [selectedKeynote, setSelectedKeynote] = useState<"sodiq-akinjobi" | "ayaosi-godfrey" | "ok-chinda">("sodiq-akinjobi");
+  const [selectedKeynote, setSelectedKeynote] = useState<"sodiq-akinjobi" | "ayaosi-godfrey">("sodiq-akinjobi");
   const currentKeynote = KEYNOTE_DATA[selectedKeynote];
 
   const filteredSpeakers = speakers;
@@ -112,7 +94,7 @@ export default function SpeakersSection({ speakers }: SpeakersSectionProps) {
         </div>
       </div>
 
-      {/* ── Featured Keynote Speaker Spotlight (Sodiq Akinjobi, Ayaosi Godfrey & Hon. O.K. Chinda) ──────── */}
+      {/* ── Featured Keynote Speaker Spotlight (Sodiq Akinjobi & Ayaosi Godfrey) ──────── */}
       <div className="mb-14 sm:mb-20 rounded-3xl bg-gradient-to-br from-white/[0.08] via-white/[0.04] to-white/[0.02] border border-white/15 p-6 sm:p-10 lg:p-12 relative overflow-hidden backdrop-blur-md shadow-2xl">
         {/* Glow ambient background effects */}
         <div className="absolute top-0 right-0 w-80 h-80 bg-google-blue/20 rounded-full blur-[100px] pointer-events-none" />
@@ -147,16 +129,6 @@ export default function SpeakersSection({ speakers }: SpeakersSectionProps) {
               }`}
             >
               ★ Ayaosi Godfrey
-            </button>
-            <button
-              onClick={() => setSelectedKeynote("ok-chinda")}
-              className={`px-4 sm:px-6 py-2 rounded-full font-akira text-xs font-bold uppercase tracking-wider transition-all cursor-pointer ${
-                selectedKeynote === "ok-chinda"
-                  ? "bg-[#F5B82A] text-black shadow-md scale-105"
-                  : "bg-white/10 text-white hover:bg-white/15 border border-white/20"
-              }`}
-            >
-              ★ Hon. O.K. Chinda
             </button>
           </div>
         </div>
